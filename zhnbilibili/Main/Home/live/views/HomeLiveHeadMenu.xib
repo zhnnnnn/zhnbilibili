@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HomeLiveHeadMenu" customModule="zhnbilibili" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="oV4-4e-yAo">
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oVF-bi-L3G">
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_home_follow_ico" translatesAutoresizingMaskIntoConstraints="NO" id="Rfg-uX-0iR">
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="Qyu-xc-K1l"/>
+                                        <constraint firstAttribute="height" constant="50" id="f9v-1w-6d6"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关注主播" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ha-82-tev">
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTa-DH-RTy">
+                                    <connections>
+                                        <action selector="menuChoseAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="3wB-wU-nlV"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="bTa-DH-RTy" secondAttribute="bottom" id="2Qm-DO-ElE"/>
+                                <constraint firstItem="7ha-82-tev" firstAttribute="top" secondItem="Rfg-uX-0iR" secondAttribute="bottom" constant="8" id="4Mk-cE-RVd"/>
+                                <constraint firstItem="Rfg-uX-0iR" firstAttribute="centerX" secondItem="oVF-bi-L3G" secondAttribute="centerX" id="8Wk-3k-lh6"/>
+                                <constraint firstItem="bTa-DH-RTy" firstAttribute="top" secondItem="oVF-bi-L3G" secondAttribute="top" id="Bly-Pw-fAn"/>
+                                <constraint firstItem="bTa-DH-RTy" firstAttribute="leading" secondItem="oVF-bi-L3G" secondAttribute="leading" id="Ldn-vn-d1A"/>
+                                <constraint firstItem="Rfg-uX-0iR" firstAttribute="top" secondItem="oVF-bi-L3G" secondAttribute="top" constant="15" id="qYb-x7-5c8"/>
+                                <constraint firstItem="7ha-82-tev" firstAttribute="centerX" secondItem="Rfg-uX-0iR" secondAttribute="centerX" id="ybs-Ky-7MW"/>
+                                <constraint firstAttribute="trailing" secondItem="bTa-DH-RTy" secondAttribute="trailing" id="ypb-fj-ycD"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAN-gc-16K">
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_home_center_ico" translatesAutoresizingMaskIntoConstraints="NO" id="ZuH-Uu-t9u">
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="6gh-If-8ax"/>
+                                        <constraint firstAttribute="height" constant="50" id="bcj-dn-zVA"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="直播中心" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2N-gT-jj7">
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuS-qF-GRf">
+                                    <connections>
+                                        <action selector="menuChoseAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="JB5-BF-VKy"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="vuS-qF-GRf" secondAttribute="bottom" id="GH7-Ce-DE1"/>
+                                <constraint firstItem="vuS-qF-GRf" firstAttribute="leading" secondItem="nAN-gc-16K" secondAttribute="leading" id="MlY-KQ-up9"/>
+                                <constraint firstItem="H2N-gT-jj7" firstAttribute="top" secondItem="ZuH-Uu-t9u" secondAttribute="bottom" constant="8" id="O3E-xQ-gBf"/>
+                                <constraint firstItem="vuS-qF-GRf" firstAttribute="top" secondItem="nAN-gc-16K" secondAttribute="top" id="TFP-yt-5uW"/>
+                                <constraint firstItem="ZuH-Uu-t9u" firstAttribute="top" secondItem="nAN-gc-16K" secondAttribute="top" constant="15" id="Vbo-k1-Hgf"/>
+                                <constraint firstItem="H2N-gT-jj7" firstAttribute="centerX" secondItem="ZuH-Uu-t9u" secondAttribute="centerX" id="cyY-0S-MEA"/>
+                                <constraint firstItem="ZuH-Uu-t9u" firstAttribute="centerX" secondItem="nAN-gc-16K" secondAttribute="centerX" id="d1w-jc-gRb"/>
+                                <constraint firstAttribute="trailing" secondItem="vuS-qF-GRf" secondAttribute="trailing" id="sXn-gv-gN8"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sHn-Z3-we7">
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_home_search_ico" translatesAutoresizingMaskIntoConstraints="NO" id="GYV-eZ-15B">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="9OL-S1-NL0"/>
+                                        <constraint firstAttribute="width" constant="50" id="BAf-vg-xv1"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="搜索房间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUa-MU-vyL">
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnk-2X-Lb2">
+                                    <connections>
+                                        <action selector="menuChoseAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="DhS-Fy-Gud"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="cUa-MU-vyL" firstAttribute="centerX" secondItem="GYV-eZ-15B" secondAttribute="centerX" id="2WV-m0-Fjl"/>
+                                <constraint firstItem="cnk-2X-Lb2" firstAttribute="leading" secondItem="sHn-Z3-we7" secondAttribute="leading" id="4De-Xd-qZ0"/>
+                                <constraint firstItem="cnk-2X-Lb2" firstAttribute="top" secondItem="sHn-Z3-we7" secondAttribute="top" id="NWY-ZX-4qN"/>
+                                <constraint firstItem="GYV-eZ-15B" firstAttribute="top" secondItem="sHn-Z3-we7" secondAttribute="top" constant="15" id="SfK-vs-2EV"/>
+                                <constraint firstItem="cUa-MU-vyL" firstAttribute="top" secondItem="GYV-eZ-15B" secondAttribute="bottom" constant="8" id="Yi6-i9-Pk9"/>
+                                <constraint firstItem="GYV-eZ-15B" firstAttribute="centerX" secondItem="sHn-Z3-we7" secondAttribute="centerX" id="bNe-Qe-i4a"/>
+                                <constraint firstAttribute="bottom" secondItem="cnk-2X-Lb2" secondAttribute="bottom" id="c0h-O4-0u3"/>
+                                <constraint firstAttribute="trailing" secondItem="cnk-2X-Lb2" secondAttribute="trailing" id="fbC-Sb-NAE"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gf8-o7-RNQ">
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_home_category_ico" translatesAutoresizingMaskIntoConstraints="NO" id="wpv-ky-APK">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="2iD-eY-1jO"/>
+                                        <constraint firstAttribute="width" constant="50" id="PNG-id-k08"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全部分类" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syj-SR-mHH">
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Yb-3i-W0k">
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                    <connections>
+                                        <action selector="menuChoseAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="wSG-xh-V3p"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="3Yb-3i-W0k" firstAttribute="top" secondItem="Gf8-o7-RNQ" secondAttribute="top" id="2YM-nK-9HV"/>
+                                <constraint firstAttribute="trailing" secondItem="3Yb-3i-W0k" secondAttribute="trailing" id="7o7-Jf-usG"/>
+                                <constraint firstAttribute="bottom" secondItem="3Yb-3i-W0k" secondAttribute="bottom" id="CJs-mY-l38"/>
+                                <constraint firstItem="wpv-ky-APK" firstAttribute="top" secondItem="Gf8-o7-RNQ" secondAttribute="top" constant="15" id="Dlq-wQ-oIM"/>
+                                <constraint firstItem="Syj-SR-mHH" firstAttribute="top" secondItem="wpv-ky-APK" secondAttribute="bottom" constant="8" id="F66-Bk-1CT"/>
+                                <constraint firstItem="Syj-SR-mHH" firstAttribute="centerX" secondItem="wpv-ky-APK" secondAttribute="centerX" id="Nnm-1s-Fem"/>
+                                <constraint firstItem="3Yb-3i-W0k" firstAttribute="leading" secondItem="Gf8-o7-RNQ" secondAttribute="leading" id="Xls-Ye-Tu7"/>
+                                <constraint firstItem="wpv-ky-APK" firstAttribute="centerX" secondItem="Gf8-o7-RNQ" secondAttribute="centerX" id="wwl-a1-js2"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="oV4-4e-yAo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ErA-Qr-JWi"/>
+                <constraint firstItem="oV4-4e-yAo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XZD-rf-yNk"/>
+                <constraint firstAttribute="trailing" secondItem="oV4-4e-yAo" secondAttribute="trailing" id="ecA-6z-o7K"/>
+                <constraint firstAttribute="bottom" secondItem="oV4-4e-yAo" secondAttribute="bottom" id="hfA-uX-NkC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-139.5" y="-27"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="live_home_category_ico" width="16" height="16"/>
+        <image name="live_home_center_ico" width="16" height="16"/>
+        <image name="live_home_follow_ico" width="16" height="16"/>
+        <image name="live_home_search_ico" width="16" height="16"/>
+    </resources>
+</document>
