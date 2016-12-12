@@ -8,14 +8,10 @@
 
 import UIKit
 
-@objc protocol HomeBangumiTopFootDelegate {
-    @objc optional func HomeBangumiTopFootBannerClickIndex(index: Int)
-}
-
 class HomeBangumiTopFoot: UICollectionReusableView {
     
-    // MARK: - 代理
-    weak var delegate: HomeBangumiTopFootDelegate?
+    // 数据
+    var modelArray: [HomeBangumiADdetailModel]?
     
     // MARK: - 懒加载控件
     lazy var carouselView: ZHNCarouselView = {
@@ -45,10 +41,8 @@ class HomeBangumiTopFoot: UICollectionReusableView {
 
 extension HomeBangumiTopFoot: ZHNcarouselViewDelegate {
     func ZHNcarouselViewSelectedIndex(index: Int) {
-        if let delegate = delegate {
-            if let method = delegate.HomeBangumiTopFootBannerClickIndex{
-                method(index)
-            }
-        }
+        guard let model = modelArray?[index] else {return}
+        guard let link = model.link else {return}
+        ZHNnotificationHelper.bangumicarouselClickNotification(link: link)
     }
 }

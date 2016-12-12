@@ -9,6 +9,7 @@
 import UIKit
 import WebKit
 
+
 class ZHNbilibiliWebViewController: UIViewController {
 
     // 展示的url
@@ -83,7 +84,7 @@ extension ZHNbilibiliWebViewController: WKNavigationDelegate {
 //======================================================================
 extension ZHNbilibiliWebViewController {
     @objc fileprivate func pravitePopViewController() {
-        navigationController?.popViewController(animated: true)
+        _ = navigationController?.popViewController(animated: true)
     }
 }
 

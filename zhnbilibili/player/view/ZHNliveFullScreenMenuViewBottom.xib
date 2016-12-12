@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ZHNliveFullScreenMenuViewBottom" customModule="zhnbilibili" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="489" height="107"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Jb-uP-zEN">
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="sendDanmuAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="nV6-ln-yaa"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6F-Lz-mm8">
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="hotWordsAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="F75-aK-W8N"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfd-M5-z0G">
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="blockGiftAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="bYe-V0-wqa"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXC-gE-6w4">
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="loginAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="nBp-An-BKn"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXz-j3-Z7C">
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="dealDanmuAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Lqs-MI-NGB"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jp1-05-p3A">
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="dealDanmuAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="kUO-Kv-V92"/>
+                        <action selector="resignFullScreenAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="eiV-zi-wT6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9L-Cs-kET">
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="sendGiftAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="YET-F5-beC"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="qfd-M5-z0G" firstAttribute="leading" secondItem="B9L-Cs-kET" secondAttribute="trailing" constant="20" id="8V5-hc-L5Y"/>
+                <constraint firstItem="1Jb-uP-zEN" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="BHw-wD-6Rz"/>
+                <constraint firstItem="jp1-05-p3A" firstAttribute="leading" secondItem="jXz-j3-Z7C" secondAttribute="trailing" constant="20" id="Csi-TY-MNE"/>
+                <constraint firstItem="jXz-j3-Z7C" firstAttribute="leading" secondItem="dXC-gE-6w4" secondAttribute="trailing" constant="20" id="HeM-SO-unj"/>
+                <constraint firstItem="1Jb-uP-zEN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="ILz-HO-Ebx"/>
+                <constraint firstItem="t6F-Lz-mm8" firstAttribute="leading" secondItem="1Jb-uP-zEN" secondAttribute="trailing" constant="20" id="RxJ-mu-ihG"/>
+                <constraint firstItem="jXz-j3-Z7C" firstAttribute="centerY" secondItem="jp1-05-p3A" secondAttribute="centerY" id="UZq-PC-hAR"/>
+                <constraint firstItem="t6F-Lz-mm8" firstAttribute="centerY" secondItem="1Jb-uP-zEN" secondAttribute="centerY" id="c9v-ds-f3w"/>
+                <constraint firstItem="dXC-gE-6w4" firstAttribute="leading" secondItem="qfd-M5-z0G" secondAttribute="trailing" constant="20" id="lg7-tA-rqs"/>
+                <constraint firstItem="dXC-gE-6w4" firstAttribute="centerY" secondItem="jXz-j3-Z7C" secondAttribute="centerY" id="qqS-Rj-peg"/>
+                <constraint firstAttribute="trailing" secondItem="jp1-05-p3A" secondAttribute="trailing" constant="15" id="sVj-Cw-OvS"/>
+                <constraint firstItem="qfd-M5-z0G" firstAttribute="centerY" secondItem="dXC-gE-6w4" secondAttribute="centerY" id="sd3-4T-D7g"/>
+                <constraint firstItem="jp1-05-p3A" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="td9-H6-gbL"/>
+                <constraint firstItem="B9L-Cs-kET" firstAttribute="centerY" secondItem="qfd-M5-z0G" secondAttribute="centerY" id="yUV-lE-LZJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-202" y="-142"/>
+        </view>
+    </objects>
+</document>

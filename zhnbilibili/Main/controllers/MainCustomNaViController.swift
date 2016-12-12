@@ -14,6 +14,7 @@ class MainCustomNaViController: UINavigationController {
         super.viewDidLoad()
         
         self.isNavigationBarHidden = true
+        
     }
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
@@ -22,10 +23,5 @@ class MainCustomNaViController: UINavigationController {
             viewController.hidesBottomBarWhenPushed = true
         }
         super.pushViewController(viewController, animated: animated)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }

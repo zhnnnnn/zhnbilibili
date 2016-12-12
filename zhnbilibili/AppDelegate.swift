@@ -8,23 +8,56 @@
 
 import UIKit
 import Kingfisher
+import ReachabilitySwift
+
+enum networkType {
+    case WWAN // 2g3g
+    case WIFI // wift
+    case NONETWORK // 没有网络
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    var netWorktype: networkType?
+    let reachability = Reachability()!
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // 显示FPS
         JPFPSStatus.sharedInstance().open()
-        
-        
+        //添加观察者观察网络状态的改变
+        initNetWorkObserver()
         
         return true
     }
 
+    fileprivate func initNetWorkObserver() {
+        reachability.whenReachable = { [weak self] reachability in
+            DispatchQueue.main.async {
+                if reachability.isReachableViaWiFi {
+                    self?.netWorktype = .WIFI
+                } else if reachability.isReachableViaWWAN {
+                    self?.netWorktype = .WWAN
+                }
+            }
+        }
+        
+        reachability.whenUnreachable = { reachability in
+            DispatchQueue.main.async {
+                self.netWorktype = .NONETWORK
+            }
+        }
+        
+        do {
+            try reachability.startNotifier()
+        } catch {
+            print("Unable to start notifier")
+        }
+    }
+    
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

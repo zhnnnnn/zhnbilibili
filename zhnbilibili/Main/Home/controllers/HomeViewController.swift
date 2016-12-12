@@ -8,6 +8,16 @@
 
 import UIKit
 
+/// 点击了各个轮播的通知
+///1.直播
+let kcarouselViewSelectedLiVENotification = NSNotification.Name(rawValue: "kcarouselViewSelectedLiVENotification")
+///2.推荐
+let kcarouselViewSelectedRECOMMENDNotification = NSNotification.Name(rawValue: "kcarouselViewSelectedLRECOMMENDNotification")
+///3.番剧
+let kcarouselViewSelectedBANGUMINotification = NSNotification.Name(rawValue: "kcarouselViewSelectedBANGUMINotification")
+
+let kcarouselSelectedUrlKey = "kcarouselSelectedUrlKey"
+
 class HomeViewController: UIViewController {
 
     lazy var contentScrollView: UIScrollView = {[unowned self] in

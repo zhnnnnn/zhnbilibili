@@ -56,7 +56,7 @@ class liveShowCell: normalBaseCell {
     
     lazy var playIocnImageView: UIImageView = {
         let playIconImageView = UIImageView()
-        playIconImageView.image = UIImage(named: "live_eye_icon")
+        playIconImageView.image = UIImage(named: "live_looking")
         playIconImageView.contentMode = .center
         return playIconImageView
     }()

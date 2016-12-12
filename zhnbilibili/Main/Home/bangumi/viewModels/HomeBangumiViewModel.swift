@@ -10,15 +10,8 @@ import UIKit
 import SwiftyJSON
 import HandyJSON
 
-@objc protocol HomeBangumiViewModelDelegate {
-    @objc optional func HomeBangumiViewModelClickTopBannerIndex(index: Int)
-    @objc optional func HomeBangumiViewModelClickBodyBannerIndex(index: Int)
-}
-
 class HomeBangumiViewModel {
     
-// MARK: - 代理
-    weak var delegate: HomeBangumiViewModelDelegate?
 // MARK: - 私有属性
     // 新番
     fileprivate var previousModelArray = [HomeBangumiDetailModel]()
@@ -191,10 +184,10 @@ extension HomeBangumiViewModel {
                 if headImageStringArray.count > 0 {
                     head.isNoBanner = false
                     head.imgStringArray = headImageStringArray
+                    head.bannerModelArray = headBannerModelArray
                 }else{
                     head.isNoBanner = true
                 }
-                head.delegate = self
                 return head
             }else {
                 let head = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kbangumiNormalHeadReuseKey, for: indexPath) as! HomeBangumiNormalHead
@@ -208,7 +201,7 @@ extension HomeBangumiViewModel {
         }else{ // foot
             let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kbangumiBannerFootReuseKey, for: indexPath) as! HomeBangumiTopFoot
             footer.carouselView.intnetImageArray = bodyImageStringArray
-            footer.delegate = self
+            footer.modelArray = bodyBannerModelArray
             return footer
         }
     }
@@ -252,27 +245,5 @@ extension HomeBangumiViewModel {
     }
 }
 
-//======================================================================
-// MARK:- banner 点击的代理方法
-//======================================================================
-extension HomeBangumiViewModel: HomeBangumiTopViewDelegate {
-    func HomeBangumiTopViewDelegate(index: Int) {
-        if let delegate = delegate {
-            if let method = delegate.HomeBangumiViewModelClickTopBannerIndex{
-                method(index)
-            }
-        }
-    }
-}
-
-extension HomeBangumiViewModel: HomeBangumiTopFootDelegate {
-    func HomeBangumiTopFootBannerClickIndex(index: Int) {
-        if let delegate = delegate {
-            if let method = delegate.HomeBangumiViewModelClickBodyBannerIndex{
-                method(index)
-            }
-        }
-    }
-}
 
 

@@ -8,16 +8,11 @@
 
 import UIKit
 
-@objc protocol HomeBangumiTopViewDelegate {
-    @objc optional func HomeBangumiTopViewDelegate(index :Int)
-}
-
 class HomeBangumiTopView: UICollectionReusableView {
     
-    // MARK: - 代理
-    weak var delegate: HomeBangumiTopViewDelegate?
     // MARK: - 外部赋值属性
     var isNoBanner = false
+    var bannerModelArray: [HomeBangumiADdetailModel]?
     var imgStringArray: [String]? {
         didSet{
             guard let count = imgStringArray?.count else {return}
@@ -87,10 +82,8 @@ class HomeBangumiTopView: UICollectionReusableView {
 
 extension HomeBangumiTopView: ZHNcarouselViewDelegate {
     func ZHNcarouselViewSelectedIndex(index: Int) {
-        if let delegate = delegate {
-            if let method = delegate.HomeBangumiTopViewDelegate{
-                method(index)
-            }
-        }
+        guard let model = bannerModelArray?[index] else {return}
+        guard let link = model.link else {return}
+        ZHNnotificationHelper.bangumicarouselClickNotification(link: link)
     }
 }

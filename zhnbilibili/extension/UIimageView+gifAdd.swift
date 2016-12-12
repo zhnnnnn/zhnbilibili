@@ -25,4 +25,20 @@ extension UIImageView {
         return gifImage
     }
     
+    // 加载视频的gif
+    class func createPlayLoadingGif() -> UIImageView {
+        let gifImage = UIImageView()
+        var gifImageArray = [UIImage]()
+        for i in 1...5{
+            let image = UIImage(named: "ani_loading_\(i)")
+            gifImageArray.append(image!)
+        }
+        gifImage.contentMode = UIViewContentMode.center
+        gifImage.animationImages = gifImageArray
+        gifImage.animationDuration = 0.3
+        gifImage.animationRepeatCount = 0
+        return gifImage
+    }
+    
+    
 }

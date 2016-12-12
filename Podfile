@@ -5,6 +5,7 @@
   use_frameworks!
 
 target 'zhnbilibili' do
+  pod 'ReachabilitySwift', '~> 3'
   pod 'SDWebImage', '~>3.8'
   pod 'SwiftyJSON'
   pod 'SwiftDate', '~> 4.0'

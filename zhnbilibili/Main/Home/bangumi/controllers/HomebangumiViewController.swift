@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 let kbangumiALLCellReuseKey = "kbangumiALLCellReuseKey"
 let KbangumiBannerMenuReuseKey = "KbangumiBannerMenuReuseKey"
 let kbangumiNormalHeadReuseKey = "kbangumiNormalHeadReuseKey"
@@ -45,7 +44,7 @@ class HomebangumiViewController: ZHNrabbitFreshBaseViewController {
         // 加载数据
         loadDatas()
         
-        bangumiVM.delegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(carouselViewSelecLink(notification:)), name: kcarouselViewSelectedLiVENotification, object: nil)
     }
 
     // MARK: - 重载父类
@@ -56,7 +55,14 @@ class HomebangumiViewController: ZHNrabbitFreshBaseViewController {
     override func startRefresh() {
         loadDatas()
     }
+    
+    // 移除监听
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 }
+
+
 
 //======================================================================
 // MARK:- 私有方法
@@ -143,22 +149,12 @@ extension HomebangumiViewController: UICollectionViewDelegateFlowLayout{
 //======================================================================
 // MARK:- banner 点击事件
 //======================================================================
-extension HomebangumiViewController: HomeBangumiViewModelDelegate {
-    func HomeBangumiViewModelClickTopBannerIndex(index: Int) {
-        let model = bangumiVM.headBannerModelArray[index]
-        guard let link = model.link else {
-            self.noticeError("链接错误")
-            return
-        }
-        let webController = ZHNbilibiliWebViewController()
-        webController.urlString = link
-        navigationController?.pushViewController(webController, animated: true)
-    }
+extension HomebangumiViewController {
     
-    func HomeBangumiViewModelClickBodyBannerIndex(index: Int) {
-        let model = bangumiVM.bodyBannerModelArray[index]
-        guard let link = model.link else {
-            self.noticeError("链接错误")
+    func carouselViewSelecLink(notification:Notification) {
+        let userInfo = notification.userInfo
+        guard let link = userInfo?[kcarouselSelectedUrlKey] as? String else {
+            self.noticeError("url错误")
             return
         }
         let webController = ZHNbilibiliWebViewController()

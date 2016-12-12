@@ -65,6 +65,7 @@ class homeLivehead: UICollectionReusableView {
     lazy var carouselView: ZHNCarouselView = {
         let carouselView = ZHNCarouselView(viewframe: CGRect(x: 0, y: 0, width: kscreenWidth, height: kcarouselHeight))
         carouselView.clipsToBounds = true
+        carouselView.delegate = self
         return carouselView
     }()
     
@@ -125,5 +126,13 @@ extension homeLivehead {
         }
     }
 
+}
+
+extension homeLivehead: ZHNcarouselViewDelegate {
+    func ZHNcarouselViewSelectedIndex(index: Int) {
+        guard let model = bannerModelArray?[index] else {return}
+        guard let link = model.link else {return}
+        ZHNnotificationHelper.livecarouselClickNotification(link: link)
+    }
 }
 

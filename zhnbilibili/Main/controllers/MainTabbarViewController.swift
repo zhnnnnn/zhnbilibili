@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainTabbarViewController: UITabBarController {
+class MainTabbarViewController: UITabBarController,UITabBarControllerDelegate {
 
     struct maintabbarItem {
         var title = ""
@@ -65,8 +65,6 @@ class MainTabbarViewController: UITabBarController {
         return itemsArray
     }()
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -82,7 +80,14 @@ class MainTabbarViewController: UITabBarController {
         }
         
         self.tabBar.tintColor = knavibarcolor
-        
     }
     
+    // 和statusbar的旋转相呼应
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
+    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.portrait
+    }
 }

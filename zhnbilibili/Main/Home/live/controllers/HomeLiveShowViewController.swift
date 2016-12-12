@@ -54,6 +54,8 @@ class HomeLiveShowViewController: ZHNrabbitFreshBaseViewController {
         
         liveVM.delegate = self
         view.addSubview(startLivIngButton)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(carouselViewSelecLink(notification:)), name: kcarouselViewSelectedBANGUMINotification, object: nil)
     }
     
     // MARK: - 重写父类的方法
@@ -65,6 +67,10 @@ class HomeLiveShowViewController: ZHNrabbitFreshBaseViewController {
     // 2. 刷新状态调用的方法
     override func startRefresh() {
         loadDatas()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 }
 
@@ -125,7 +131,12 @@ extension HomeLiveShowViewController: UICollectionViewDataSource {
 extension HomeLiveShowViewController: UICollectionViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    
+        let sectionModel = liveVM.statusModelArray[indexPath.section]
+        let rowModel = sectionModel.lives?[indexPath.row]
+        guard let playUrl = rowModel?.playurl else {return}
+        let vc = ZHNbilibiliLivePlayerViewController()
+        vc.liveString = playUrl
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }
@@ -154,6 +165,23 @@ extension HomeLiveShowViewController: UICollectionViewDelegateFlowLayout{
     // 3.footer的size
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
         return liveVM.calculateFootHeight(section: section)
+    }
+}
+
+//======================================================================
+// MARK:- banner 点击事件
+//======================================================================
+extension HomeLiveShowViewController {
+    
+    func carouselViewSelecLink(notification:Notification) {
+        let userInfo = notification.userInfo
+        guard let link = userInfo?[kcarouselSelectedUrlKey] as? String else {
+            self.noticeError("url错误")
+            return
+        }
+        let webController = ZHNbilibiliWebViewController()
+        webController.urlString = link
+        navigationController?.pushViewController(webController, animated: true)
     }
 }
 
