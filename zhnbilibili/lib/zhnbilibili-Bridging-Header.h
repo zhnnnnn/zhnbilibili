@@ -5,3 +5,5 @@
 #import "HJCornerRadius.h"
 #import "JPFPSStatus.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "VideoURL.h"
+#import "BarrageHeader.h"

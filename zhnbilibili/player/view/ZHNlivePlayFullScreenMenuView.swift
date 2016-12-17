@@ -65,7 +65,7 @@ class ZHNlivePlayFullScreenMenuView: ZHNplayerMenuBaseView {
         }
         menuTop.snp.makeConstraints { (make) in
             make.left.right.equalTo(self)
-            make.top.equalTo(self).offset(20)
+            make.top.equalTo(self).offset(10)
             make.height.equalTo(50)
         }
         

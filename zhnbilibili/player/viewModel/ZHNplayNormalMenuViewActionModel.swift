@@ -15,7 +15,7 @@ class ZHNplayNormalMenuViewActionModel: ZHNplayBaseActionModel {
 extension ZHNplayNormalMenuViewActionModel: ZHNlivePlayMenuNormalViewDelegate {
     
     func pauseAction(isPlaying: Bool) {
-        guard let playerVC = currentViewController as? ZHNbilibiliLivePlayerViewController else {return}
+        guard let playerVC = currentViewController as? ZHNPlayerBaseViewController else {return}
         // 判断暂停还是播放
         if isPlaying {
             playerVC.player?.pause()

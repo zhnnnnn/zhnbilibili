@@ -14,7 +14,7 @@ class ZHNplayFullScreenMenuViewActionModel: ZHNplayBaseActionModel {
 
 extension ZHNplayFullScreenMenuViewActionModel: ZHNliveFullscreenMenuViewDelegate {
     func backAction() {
-        guard let playerVC = currentViewController as? ZHNbilibiliLivePlayerViewController else {return}
+        guard let playerVC = currentViewController as? ZHNPlayerBaseViewController else {return}
         playerVC.resignFullScreen()
     }
 }

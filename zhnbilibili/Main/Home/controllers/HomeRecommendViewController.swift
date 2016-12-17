@@ -128,6 +128,11 @@ extension HomeRecommendViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // banner 跳转的时候需要考虑可能是直播 bilibili://live/11
+        let sectionModel = recommendVM.statusArray[indexPath.section]
+        let rowModel = sectionModel.body[indexPath.row]
+        let playerVC = ZHNnormalPlayerViewController()
+        playerVC.itemModel = rowModel
+        self.navigationController?.pushViewController(playerVC, animated: true)
     }
     
 }

@@ -131,11 +131,16 @@ extension HomeLiveShowViewController: UICollectionViewDataSource {
 extension HomeLiveShowViewController: UICollectionViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // 1.拿到数据
         let sectionModel = liveVM.statusModelArray[indexPath.section]
         let rowModel = sectionModel.lives?[indexPath.row]
+        // 2.生成控制器
         guard let playUrl = rowModel?.playurl else {return}
         let vc = ZHNbilibiliLivePlayerViewController()
+        // 3.赋值
         vc.liveString = playUrl
+        vc.liveModel = rowModel
+        // 4.跳转
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -155,7 +160,6 @@ extension HomeLiveShowViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return liveVM.calculateItemSize(indexPath: indexPath)
     }
-    
     
     // 2.header的size
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {

@@ -13,9 +13,9 @@ class ZHNplayerUrlLoadingBackViewActionModel: ZHNplayBaseActionModel {
 
 extension ZHNplayerUrlLoadingBackViewActionModel: ZHNplayerUrlLoadingbackViewDelegate {
     func popViewControllerAction() {
-        guard let playerVC = currentViewController as? ZHNbilibiliLivePlayerViewController else {return}
+        guard let playerVC = currentViewController as? ZHNPlayerBaseViewController else {return}
         if playerVC.isfullScreen {
-            guard let playerVC = currentViewController as? ZHNbilibiliLivePlayerViewController else {return}
+            guard let playerVC = currentViewController as? ZHNPlayerBaseViewController else {return}
             playerVC.resignFullScreen()
         } else {
             _ = currentViewController?.navigationController?.popViewController(animated: true)
@@ -23,7 +23,7 @@ extension ZHNplayerUrlLoadingBackViewActionModel: ZHNplayerUrlLoadingbackViewDel
     }
     
     func fullScreenAction() {
-        guard let playerVC = currentViewController as? ZHNbilibiliLivePlayerViewController else {return}
+        guard let playerVC = currentViewController as? ZHNPlayerBaseViewController else {return}
         if playerVC.isfullScreen {
             // 1.改变按钮的样式
             playerVC.playLoadingMenuView.urlLoadingFullScreenButon.setImage(UIImage(named: "player_fullScreen_iphone-1"), for: .normal)

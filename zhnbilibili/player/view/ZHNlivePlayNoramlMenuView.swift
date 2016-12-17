@@ -78,7 +78,6 @@ class ZHNlivePlayNoramlMenuView: ZHNplayerMenuBaseView {
         return shareButton
     }()
     
-    
     // MARK: - life cycle
     override init(frame: CGRect) {
         super.init(frame: frame)

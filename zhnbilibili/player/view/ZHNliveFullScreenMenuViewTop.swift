@@ -10,6 +10,17 @@ import UIKit
 
 class ZHNliveFullScreenMenuViewTop: UIView {
 
+    var detailModel: homeLiveDetailModel? {
+        didSet{
+            titleLabel.text = detailModel?.title
+            if let count  = detailModel?.room_id{
+                roomIDlabel.text = "\(count)"
+            }
+            watchIngCountLabel.text = detailModel?.online.returnShowString()    
+        }
+    }
+    
+    
     weak var supView: ZHNlivePlayFullScreenMenuView?
     
     @IBOutlet weak var titleLabel: UILabel!

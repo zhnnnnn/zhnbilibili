@@ -10,13 +10,31 @@ import UIKit
 
 extension UIView {
     
-    @IBInspectable var zhn_cornerRadius:CGFloat {
+    @IBInspectable var zhn_cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
         }
         set {
             layer.cornerRadius = newValue
             layer.masksToBounds = newValue > 0
+        }
+    }
+    
+    @IBInspectable var zhn_boderWidth: CGFloat {
+        get {
+            return layer.borderWidth
+        }
+        set {
+            layer.borderWidth = newValue
+        }
+    }
+    
+    @IBInspectable var zhn_boderColor: UIColor {
+        get {
+            return UIColor.black
+        }
+        set {
+            layer.borderColor = newValue.cgColor
         }
     }
 }

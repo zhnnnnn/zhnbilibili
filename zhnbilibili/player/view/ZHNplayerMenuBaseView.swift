@@ -168,7 +168,7 @@ extension ZHNplayerMenuBaseView {
     
     // 添加timer
     fileprivate func addTimer(needStart: Bool) {
-        animateTimer = SwiftTimer(interval: .seconds(10)) { (timer) in
+        animateTimer = SwiftTimer(interval: .seconds(15)) { (timer) in
             self.disMissAnimate()
         }
         if needStart {

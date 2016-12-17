@@ -30,7 +30,6 @@
 		CD0DC74F1DEF037200843890 /* HomeBangumiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0DC74E1DEF037200843890 /* HomeBangumiModel.swift */; };
 		CD0DC7511DEF083E00843890 /* HomeBangumiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0DC7501DEF083E00843890 /* HomeBangumiViewModel.swift */; };
 		CD2667531DF6F43600D335F9 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2667521DF6F43600D335F9 /* IJKMediaFramework.framework */; };
-		CD2667561DF6F58900D335F9 /* ZHNbilibiliPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2667551DF6F58900D335F9 /* ZHNbilibiliPlayerViewController.swift */; };
 		CD2667581DF6FC5400D335F9 /* ZHNbilibiliLivePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2667571DF6FC5400D335F9 /* ZHNbilibiliLivePlayerViewController.swift */; };
 		CD26675B1DF83A9700D335F9 /* ZHNnotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD26675A1DF83A9700D335F9 /* ZHNnotificationHelper.swift */; };
 		CD2959611DF9506700280E98 /* ZHNplayerUrlLoadingBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2959601DF9506700280E98 /* ZHNplayerUrlLoadingBackView.swift */; };
@@ -38,11 +37,22 @@
 		CD2959731DF9B56400280E98 /* ZHNplayerUrlLoadingBackViewActionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2959721DF9B56400280E98 /* ZHNplayerUrlLoadingBackViewActionModel.swift */; };
 		CD2959751DF9B62D00280E98 /* ZHNplayBaseActionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2959741DF9B62D00280E98 /* ZHNplayBaseActionModel.swift */; };
 		CD3124761DE989F40083D7AE /* JPFPSStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3124751DE989F40083D7AE /* JPFPSStatus.m */; };
+		CD3322731DFEEA81003176B0 /* ZHNlivePlayDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3322721DFEEA81003176B0 /* ZHNlivePlayDetailViewModel.swift */; };
+		CD3322751DFEF211003176B0 /* ZHNnormalPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3322741DFEF211003176B0 /* ZHNnormalPlayerViewController.swift */; };
+		CD3322791DFEF68D003176B0 /* ZHNnormalPlayerDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3322781DFEF68D003176B0 /* ZHNnormalPlayerDetailTableViewController.swift */; };
+		CD33227B1DFEF6A4003176B0 /* ZHNnormalPlayerCommondTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33227A1DFEF6A4003176B0 /* ZHNnormalPlayerCommondTableViewController.swift */; };
 		CD3FF9C61DDDEDAF00A204F4 /* ZHNnetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FF9C51DDDEDAF00A204F4 /* ZHNnetworkTool.swift */; };
 		CD3FF9C81DDE084400A204F4 /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FF9C71DDE084400A204F4 /* SwiftNotice.swift */; };
 		CD3FF9CD1DDEA04D00A204F4 /* String+zhnAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FF9CC1DDEA04D00A204F4 /* String+zhnAdd.swift */; };
+		CD4E515B1E02E25600A02190 /* normalPlayerLoadingMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E515A1E02E25600A02190 /* normalPlayerLoadingMaskView.swift */; };
+		CD4E515D1E02EBEA00A02190 /* ZHNnormalPlayWindowMenuVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E515C1E02EBEA00A02190 /* ZHNnormalPlayWindowMenuVIew.swift */; };
+		CD4E515F1E03008400A02190 /* playCustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E515E1E03008400A02190 /* playCustomSlider.swift */; };
+		CD4E51611E0307FB00A02190 /* TimeInterval+playerAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E51601E0307FB00A02190 /* TimeInterval+playerAdd.swift */; };
 		CD55491A1DE6DE8C007D4C7F /* recommendActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5549191DE6DE8C007D4C7F /* recommendActivityCell.swift */; };
 		CD6192A51DF50951006D6E55 /* HomeBangumiRecommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6192A41DF50951006D6E55 /* HomeBangumiRecommendCell.swift */; };
+		CD67493A1DFEDD2C005C7AC3 /* ZHNPlayerBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6749391DFEDD2C005C7AC3 /* ZHNPlayerBaseViewController.swift */; };
+		CD67493F1DFEE14A005C7AC3 /* ZHNliveDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD67493E1DFEE14A005C7AC3 /* ZHNliveDetailView.swift */; };
+		CD6749411DFEE154005C7AC3 /* ZHNliveDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD6749401DFEE154005C7AC3 /* ZHNliveDetailView.xib */; };
 		CD6A3ECC1DEB07D0002742A5 /* commenAreaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6A3ECB1DEB07D0002742A5 /* commenAreaCell.swift */; };
 		CD6A3ECE1DEBCDDB002742A5 /* Int+coutdealAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6A3ECD1DEBCDDB002742A5 /* Int+coutdealAdd.swift */; };
 		CD6A3ED01DEBCF7F002742A5 /* liveShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6A3ECF1DEBCF7F002742A5 /* liveShowCell.swift */; };
@@ -55,6 +65,9 @@
 		CD7157071DEE7126008B628A /* HomeLiveHeadMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7157061DEE7126008B628A /* HomeLiveHeadMenu.swift */; };
 		CD7157091DEE712F008B628A /* HomeLiveHeadMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD7157081DEE712F008B628A /* HomeLiveHeadMenu.xib */; };
 		CD71570B1DEE9405008B628A /* HomeLiveFoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD71570A1DEE9405008B628A /* HomeLiveFoot.swift */; };
+		CD781BE71E01992200A1ABD6 /* ZHNnormalPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD781BE61E01992200A1ABD6 /* ZHNnormalPlayerViewModel.swift */; };
+		CD781BEA1E01997300A1ABD6 /* ZHHnormalPayerItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD781BE91E01997300A1ABD6 /* ZHHnormalPayerItemModel.swift */; };
+		CD781BFC1E01ABDD00A1ABD6 /* VideoURL.m in Sources */ = {isa = PBXBuildFile; fileRef = CD781BF91E01ABDD00A1ABD6 /* VideoURL.m */; };
 		CD7CD1B61DDC8F4D007F0628 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CD1B51DDC8F4D007F0628 /* AppDelegate.swift */; };
 		CD7CD1BB1DDC8F4D007F0628 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7CD1B91DDC8F4D007F0628 /* Main.storyboard */; };
 		CD7CD1BD1DDC8F4D007F0628 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7CD1BC1DDC8F4D007F0628 /* Assets.xcassets */; };
@@ -68,6 +81,27 @@
 		CD7CD1F81DDD65E8007F0628 /* ZHNLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CD1F71DDD65E8007F0628 /* ZHNLog.swift */; };
 		CD7CD1FC1DDDA2A1007F0628 /* slideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CD1FB1DDDA2A1007F0628 /* slideMenu.swift */; };
 		CD7CD1FE1DDDAB75007F0628 /* UIGestureRecognizer+zhnAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CD1FD1DDDAB75007F0628 /* UIGestureRecognizer+zhnAdd.swift */; };
+		CD91B7DF1DFFBDF5001A1BDE /* playerBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD91B7DE1DFFBDF5001A1BDE /* playerBlurView.swift */; };
+		CD95DF8F1E042F5000CB5A91 /* ZHNnormalPlayFullScreenMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD95DF8E1E042F5000CB5A91 /* ZHNnormalPlayFullScreenMenuView.swift */; };
+		CD95DF911E0430AD00CB5A91 /* ZHNnormalFullScreenTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD95DF901E0430AD00CB5A91 /* ZHNnormalFullScreenTop.swift */; };
+		CD95DF931E0430B800CB5A91 /* ZHNnormalFullScreenBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD95DF921E0430B800CB5A91 /* ZHNnormalFullScreenBottom.swift */; };
+		CD95DF951E0430C700CB5A91 /* ZHNnormalFullScreenTop.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD95DF941E0430C700CB5A91 /* ZHNnormalFullScreenTop.xib */; };
+		CD95DF971E0430D700CB5A91 /* ZHNnormalFullScreenBottom.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD95DF961E0430D700CB5A91 /* ZHNnormalFullScreenBottom.xib */; };
+		CD95DFBC1E044DE200CB5A91 /* BarrageCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = CD95DF9B1E044DE200CB5A91 /* BarrageCanvas.m */; };
+		CD95DFBD1E044DE200CB5A91 /* BarrageClock.m in Sources */ = {isa = PBXBuildFile; fileRef = CD95DF9D1E044DE200CB5A91 /* BarrageClock.m */; };
+		CD95DFBE1E044DE200CB5A91 /* BarrageDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = CD95DF9F1E044DE200CB5A91 /* BarrageDescriptor.m */; };
+		CD95DFBF1E044DE200CB5A91 /* BarrageDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = CD95DFA11E044DE200CB5A91 /* BarrageDispatcher.m */; };
+		CD95DFC01E044DE200CB5A91 /* BarrageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = CD95DFA31E044DE200CB5A91 /* BarrageRenderer.m */; };
+		CD95DFC11E044DE200CB5A91 /* BarrageSpriteFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = CD95DFA51E044DE200CB5A91 /* BarrageSpriteFactory.m */; };
+		CD95DFC21E044DE200CB5A91 /* BarrageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = CD95DFA91E044DE200CB5A91 /* BarrageLoader.m */; };
+		CD95DFC31E044DE200CB5A91 /* BarrageFloatImageSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = CD95DFAC1E044DE200CB5A91 /* BarrageFloatImageSprite.m */; };
+		CD95DFC41E044DE200CB5A91 /* BarrageFloatSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = CD95DFAE1E044DE200CB5A91 /* BarrageFloatSprite.m */; };
+		CD95DFC51E044DE200CB5A91 /* BarrageFloatTextSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = CD95DFB01E044DE200CB5A91 /* BarrageFloatTextSprite.m */; };
+		CD95DFC61E044DE200CB5A91 /* BarrageSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = CD95DFB21E044DE200CB5A91 /* BarrageSprite.m */; };
+		CD95DFC71E044DE200CB5A91 /* BarrageSpriteUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CD95DFB51E044DE200CB5A91 /* BarrageSpriteUtility.m */; };
+		CD95DFC81E044DE200CB5A91 /* BarrageWalkImageSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = CD95DFB71E044DE200CB5A91 /* BarrageWalkImageSprite.m */; };
+		CD95DFC91E044DE200CB5A91 /* BarrageWalkSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = CD95DFB91E044DE200CB5A91 /* BarrageWalkSprite.m */; };
+		CD95DFCA1E044DE200CB5A91 /* BarrageWalkTextSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = CD95DFBB1E044DE200CB5A91 /* BarrageWalkTextSprite.m */; };
 		CD991BCE1DE408FD007BB093 /* normalBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD991BCD1DE408FD007BB093 /* normalBaseCell.swift */; };
 		CDA8A1B71DFD08BA00B790E2 /* ZHNloadingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA8A1B61DFD08BA00B790E2 /* ZHNloadingProgressView.swift */; };
 		CDA8A1BD1DFD803500B790E2 /* ZHNnetWorkTypeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA8A1BC1DFD803500B790E2 /* ZHNnetWorkTypeHelper.swift */; };
@@ -147,8 +181,7 @@
 		CD0DC74E1DEF037200843890 /* HomeBangumiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBangumiModel.swift; sourceTree = "<group>"; };
 		CD0DC7501DEF083E00843890 /* HomeBangumiViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBangumiViewModel.swift; sourceTree = "<group>"; };
 		CD2667521DF6F43600D335F9 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IJKMediaFramework.framework; path = zhnbilibili/IJKMediaFramework.framework; sourceTree = "<group>"; };
-		CD2667551DF6F58900D335F9 /* ZHNbilibiliPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNbilibiliPlayerViewController.swift; sourceTree = "<group>"; };
-		CD2667571DF6FC5400D335F9 /* ZHNbilibiliLivePlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNbilibiliLivePlayerViewController.swift; sourceTree = "<group>"; };
+		CD2667571DF6FC5400D335F9 /* ZHNbilibiliLivePlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZHNbilibiliLivePlayerViewController.swift; path = ../ZHNbilibiliLivePlayerViewController.swift; sourceTree = "<group>"; };
 		CD26675A1DF83A9700D335F9 /* ZHNnotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNnotificationHelper.swift; sourceTree = "<group>"; };
 		CD2959601DF9506700280E98 /* ZHNplayerUrlLoadingBackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNplayerUrlLoadingBackView.swift; sourceTree = "<group>"; };
 		CD2959641DF99B3A00280E98 /* UIImage+resizingImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+resizingImage.swift"; sourceTree = "<group>"; };
@@ -156,11 +189,22 @@
 		CD2959741DF9B62D00280E98 /* ZHNplayBaseActionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNplayBaseActionModel.swift; sourceTree = "<group>"; };
 		CD3124741DE989F40083D7AE /* JPFPSStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPFPSStatus.h; sourceTree = "<group>"; };
 		CD3124751DE989F40083D7AE /* JPFPSStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPFPSStatus.m; sourceTree = "<group>"; };
+		CD3322721DFEEA81003176B0 /* ZHNlivePlayDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNlivePlayDetailViewModel.swift; sourceTree = "<group>"; };
+		CD3322741DFEF211003176B0 /* ZHNnormalPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNnormalPlayerViewController.swift; sourceTree = "<group>"; };
+		CD3322781DFEF68D003176B0 /* ZHNnormalPlayerDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNnormalPlayerDetailTableViewController.swift; sourceTree = "<group>"; };
+		CD33227A1DFEF6A4003176B0 /* ZHNnormalPlayerCommondTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNnormalPlayerCommondTableViewController.swift; sourceTree = "<group>"; };
 		CD3FF9C51DDDEDAF00A204F4 /* ZHNnetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZHNnetworkTool.swift; path = tools/ZHNnetworkTool.swift; sourceTree = "<group>"; };
 		CD3FF9C71DDE084400A204F4 /* SwiftNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftNotice.swift; path = ../SwiftNotice.swift; sourceTree = "<group>"; };
 		CD3FF9CC1DDEA04D00A204F4 /* String+zhnAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+zhnAdd.swift"; sourceTree = "<group>"; };
+		CD4E515A1E02E25600A02190 /* normalPlayerLoadingMaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = normalPlayerLoadingMaskView.swift; sourceTree = "<group>"; };
+		CD4E515C1E02EBEA00A02190 /* ZHNnormalPlayWindowMenuVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNnormalPlayWindowMenuVIew.swift; sourceTree = "<group>"; };
+		CD4E515E1E03008400A02190 /* playCustomSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = playCustomSlider.swift; sourceTree = "<group>"; };
+		CD4E51601E0307FB00A02190 /* TimeInterval+playerAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+playerAdd.swift"; sourceTree = "<group>"; };
 		CD5549191DE6DE8C007D4C7F /* recommendActivityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recommendActivityCell.swift; sourceTree = "<group>"; };
 		CD6192A41DF50951006D6E55 /* HomeBangumiRecommendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBangumiRecommendCell.swift; sourceTree = "<group>"; };
+		CD6749391DFEDD2C005C7AC3 /* ZHNPlayerBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZHNPlayerBaseViewController.swift; path = ../ZHNPlayerBaseViewController.swift; sourceTree = "<group>"; };
+		CD67493E1DFEE14A005C7AC3 /* ZHNliveDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNliveDetailView.swift; sourceTree = "<group>"; };
+		CD6749401DFEE154005C7AC3 /* ZHNliveDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZHNliveDetailView.xib; sourceTree = "<group>"; };
 		CD6A3ECB1DEB07D0002742A5 /* commenAreaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commenAreaCell.swift; sourceTree = "<group>"; };
 		CD6A3ECD1DEBCDDB002742A5 /* Int+coutdealAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+coutdealAdd.swift"; sourceTree = "<group>"; };
 		CD6A3ECF1DEBCF7F002742A5 /* liveShowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = liveShowCell.swift; sourceTree = "<group>"; };
@@ -173,6 +217,10 @@
 		CD7157061DEE7126008B628A /* HomeLiveHeadMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLiveHeadMenu.swift; sourceTree = "<group>"; };
 		CD7157081DEE712F008B628A /* HomeLiveHeadMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeLiveHeadMenu.xib; sourceTree = "<group>"; };
 		CD71570A1DEE9405008B628A /* HomeLiveFoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLiveFoot.swift; sourceTree = "<group>"; };
+		CD781BE61E01992200A1ABD6 /* ZHNnormalPlayerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNnormalPlayerViewModel.swift; sourceTree = "<group>"; };
+		CD781BE91E01997300A1ABD6 /* ZHHnormalPayerItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHHnormalPayerItemModel.swift; sourceTree = "<group>"; };
+		CD781BF81E01ABDD00A1ABD6 /* VideoURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoURL.h; sourceTree = "<group>"; };
+		CD781BF91E01ABDD00A1ABD6 /* VideoURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoURL.m; sourceTree = "<group>"; };
 		CD7CD1B21DDC8F4D007F0628 /* zhnbilibili.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zhnbilibili.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD7CD1B51DDC8F4D007F0628 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD7CD1BA1DDC8F4D007F0628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -185,13 +233,51 @@
 		CD7CD1D11DDC8F4D007F0628 /* zhnbilibiliUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zhnbilibiliUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD7CD1D51DDC8F4D007F0628 /* zhnbilibiliUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zhnbilibiliUITests.swift; sourceTree = "<group>"; };
 		CD7CD1D71DDC8F4D007F0628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD7CD1E31DDC8F7C007F0628 /* ZHNrabbitFreshBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZHNrabbitFreshBaseViewController.swift; path = ../../ZHNrabbitFreshBaseViewController.swift; sourceTree = "<group>"; };
+		CD7CD1E31DDC8F7C007F0628 /* ZHNrabbitFreshBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNrabbitFreshBaseViewController.swift; sourceTree = "<group>"; };
 		CD7CD1E71DDC902F007F0628 /* UIColor+zhnAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+zhnAdd.swift"; sourceTree = "<group>"; };
 		CD7CD1E81DDC902F007F0628 /* UIimageView+gifAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIimageView+gifAdd.swift"; sourceTree = "<group>"; };
 		CD7CD1E91DDC902F007F0628 /* UIView+frameAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+frameAdd.swift"; sourceTree = "<group>"; };
 		CD7CD1F71DDD65E8007F0628 /* ZHNLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNLog.swift; sourceTree = "<group>"; };
-		CD7CD1FB1DDDA2A1007F0628 /* slideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = slideMenu.swift; path = ../../slideMenu.swift; sourceTree = "<group>"; };
+		CD7CD1FB1DDDA2A1007F0628 /* slideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = slideMenu.swift; sourceTree = "<group>"; };
 		CD7CD1FD1DDDAB75007F0628 /* UIGestureRecognizer+zhnAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIGestureRecognizer+zhnAdd.swift"; sourceTree = "<group>"; };
+		CD91B7DE1DFFBDF5001A1BDE /* playerBlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = playerBlurView.swift; sourceTree = "<group>"; };
+		CD95DF8E1E042F5000CB5A91 /* ZHNnormalPlayFullScreenMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNnormalPlayFullScreenMenuView.swift; sourceTree = "<group>"; };
+		CD95DF901E0430AD00CB5A91 /* ZHNnormalFullScreenTop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNnormalFullScreenTop.swift; sourceTree = "<group>"; };
+		CD95DF921E0430B800CB5A91 /* ZHNnormalFullScreenBottom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNnormalFullScreenBottom.swift; sourceTree = "<group>"; };
+		CD95DF941E0430C700CB5A91 /* ZHNnormalFullScreenTop.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZHNnormalFullScreenTop.xib; sourceTree = "<group>"; };
+		CD95DF961E0430D700CB5A91 /* ZHNnormalFullScreenBottom.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZHNnormalFullScreenBottom.xib; sourceTree = "<group>"; };
+		CD95DF9A1E044DE200CB5A91 /* BarrageCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageCanvas.h; sourceTree = "<group>"; };
+		CD95DF9B1E044DE200CB5A91 /* BarrageCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageCanvas.m; sourceTree = "<group>"; };
+		CD95DF9C1E044DE200CB5A91 /* BarrageClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageClock.h; sourceTree = "<group>"; };
+		CD95DF9D1E044DE200CB5A91 /* BarrageClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageClock.m; sourceTree = "<group>"; };
+		CD95DF9E1E044DE200CB5A91 /* BarrageDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageDescriptor.h; sourceTree = "<group>"; };
+		CD95DF9F1E044DE200CB5A91 /* BarrageDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageDescriptor.m; sourceTree = "<group>"; };
+		CD95DFA01E044DE200CB5A91 /* BarrageDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageDispatcher.h; sourceTree = "<group>"; };
+		CD95DFA11E044DE200CB5A91 /* BarrageDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageDispatcher.m; sourceTree = "<group>"; };
+		CD95DFA21E044DE200CB5A91 /* BarrageRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageRenderer.h; sourceTree = "<group>"; };
+		CD95DFA31E044DE200CB5A91 /* BarrageRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageRenderer.m; sourceTree = "<group>"; };
+		CD95DFA41E044DE200CB5A91 /* BarrageSpriteFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageSpriteFactory.h; sourceTree = "<group>"; };
+		CD95DFA51E044DE200CB5A91 /* BarrageSpriteFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageSpriteFactory.m; sourceTree = "<group>"; };
+		CD95DFA61E044DE200CB5A91 /* BarrageHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageHeader.h; sourceTree = "<group>"; };
+		CD95DFA81E044DE200CB5A91 /* BarrageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageLoader.h; sourceTree = "<group>"; };
+		CD95DFA91E044DE200CB5A91 /* BarrageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageLoader.m; sourceTree = "<group>"; };
+		CD95DFAB1E044DE200CB5A91 /* BarrageFloatImageSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageFloatImageSprite.h; sourceTree = "<group>"; };
+		CD95DFAC1E044DE200CB5A91 /* BarrageFloatImageSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageFloatImageSprite.m; sourceTree = "<group>"; };
+		CD95DFAD1E044DE200CB5A91 /* BarrageFloatSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageFloatSprite.h; sourceTree = "<group>"; };
+		CD95DFAE1E044DE200CB5A91 /* BarrageFloatSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageFloatSprite.m; sourceTree = "<group>"; };
+		CD95DFAF1E044DE200CB5A91 /* BarrageFloatTextSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageFloatTextSprite.h; sourceTree = "<group>"; };
+		CD95DFB01E044DE200CB5A91 /* BarrageFloatTextSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageFloatTextSprite.m; sourceTree = "<group>"; };
+		CD95DFB11E044DE200CB5A91 /* BarrageSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageSprite.h; sourceTree = "<group>"; };
+		CD95DFB21E044DE200CB5A91 /* BarrageSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageSprite.m; sourceTree = "<group>"; };
+		CD95DFB31E044DE200CB5A91 /* BarrageSpriteProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageSpriteProtocol.h; sourceTree = "<group>"; };
+		CD95DFB41E044DE200CB5A91 /* BarrageSpriteUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageSpriteUtility.h; sourceTree = "<group>"; };
+		CD95DFB51E044DE200CB5A91 /* BarrageSpriteUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageSpriteUtility.m; sourceTree = "<group>"; };
+		CD95DFB61E044DE200CB5A91 /* BarrageWalkImageSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageWalkImageSprite.h; sourceTree = "<group>"; };
+		CD95DFB71E044DE200CB5A91 /* BarrageWalkImageSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageWalkImageSprite.m; sourceTree = "<group>"; };
+		CD95DFB81E044DE200CB5A91 /* BarrageWalkSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageWalkSprite.h; sourceTree = "<group>"; };
+		CD95DFB91E044DE200CB5A91 /* BarrageWalkSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageWalkSprite.m; sourceTree = "<group>"; };
+		CD95DFBA1E044DE200CB5A91 /* BarrageWalkTextSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageWalkTextSprite.h; sourceTree = "<group>"; };
+		CD95DFBB1E044DE200CB5A91 /* BarrageWalkTextSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageWalkTextSprite.m; sourceTree = "<group>"; };
 		CD991BCD1DE408FD007BB093 /* normalBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = normalBaseCell.swift; sourceTree = "<group>"; };
 		CDA8A1B61DFD08BA00B790E2 /* ZHNloadingProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNloadingProgressView.swift; sourceTree = "<group>"; };
 		CDA8A1BC1DFD803500B790E2 /* ZHNnetWorkTypeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNnetWorkTypeHelper.swift; sourceTree = "<group>"; };
@@ -203,7 +289,7 @@
 		CDA8A1C81DFD9FE400B790E2 /* UIView+captureImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+captureImage.swift"; sourceTree = "<group>"; };
 		CDC31B5F1DE3EFDE00EADC2A /* collectionNormalHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collectionNormalHeader.swift; sourceTree = "<group>"; };
 		CDC704AC1DF552F400230AC9 /* ZHNbilibiliWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNbilibiliWebViewController.swift; sourceTree = "<group>"; };
-		CDC704AE1DF5573500230AC9 /* customNaviBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customNaviBar.swift; sourceTree = "<group>"; };
+		CDC704AE1DF5573500230AC9 /* customNaviBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = customNaviBar.swift; path = ../../Base/views/customNaviBar.swift; sourceTree = "<group>"; };
 		CDC704B21DF5B6EE00230AC9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		CDC704B41DF5B6F700230AC9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		CDC704B61DF5B70600230AC9 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -307,6 +393,7 @@
 		CD0AE44D1DE2BA2A00FCE7E0 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				CDC704AE1DF5573500230AC9 /* customNaviBar.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -368,53 +455,18 @@
 			path = ../views;
 			sourceTree = "<group>";
 		};
-		CD0AE45B1DE2DD2900FCE7E0 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				CD0AE45C1DE2DD2900FCE7E0 /* controllers */,
-				CD0AE45D1DE2DD2900FCE7E0 /* views */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		CD0AE45C1DE2DD2900FCE7E0 /* controllers */ = {
-			isa = PBXGroup;
-			children = (
-				CD7CD1E31DDC8F7C007F0628 /* ZHNrabbitFreshBaseViewController.swift */,
-			);
-			path = controllers;
-			sourceTree = "<group>";
-		};
-		CD0AE45D1DE2DD2900FCE7E0 /* views */ = {
-			isa = PBXGroup;
-			children = (
-				CD7CD1FB1DDDA2A1007F0628 /* slideMenu.swift */,
-				CDC704AE1DF5573500230AC9 /* customNaviBar.swift */,
-			);
-			path = views;
-			sourceTree = "<group>";
-		};
 		CD2667541DF6F54C00D335F9 /* player */ = {
 			isa = PBXGroup;
 			children = (
-				CD2959691DF9ACB500280E98 /* viewModel */,
-				CD29595F1DF9501400280E98 /* view */,
-				CD2667551DF6F58900D335F9 /* ZHNbilibiliPlayerViewController.swift */,
-				CD2667571DF6FC5400D335F9 /* ZHNbilibiliLivePlayerViewController.swift */,
+				CD67493C1DFEDFBE005C7AC3 /* normalplayer */,
+				CD67493B1DFEDFAE005C7AC3 /* liveplayer */,
+				CDA8A1BA1DFD445300B790E2 /* base */,
+				CD2959691DF9ACB500280E98 /* ActionModel */,
 			);
 			path = player;
 			sourceTree = "<group>";
 		};
-		CD29595F1DF9501400280E98 /* view */ = {
-			isa = PBXGroup;
-			children = (
-				CDA8A1BB1DFD445D00B790E2 /* menu */,
-				CDA8A1BA1DFD445300B790E2 /* base */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		CD2959691DF9ACB500280E98 /* viewModel */ = {
+		CD2959691DF9ACB500280E98 /* ActionModel */ = {
 			isa = PBXGroup;
 			children = (
 				CD2959741DF9B62D00280E98 /* ZHNplayBaseActionModel.swift */,
@@ -422,6 +474,7 @@
 				CD00FB9B1DFC46E9009DF326 /* ZHNplayNormalMenuViewActionModel.swift */,
 				CDA8A1C61DFD9CBC00B790E2 /* ZHNplayFullScreenMenuViewActionModel.swift */,
 			);
+			name = ActionModel;
 			path = viewModel;
 			sourceTree = "<group>";
 		};
@@ -434,9 +487,25 @@
 			name = fps;
 			sourceTree = "<group>";
 		};
+		CD3322701DFEEA51003176B0 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CD3322721DFEEA81003176B0 /* ZHNlivePlayDetailViewModel.swift */,
+			);
+			name = viewModel;
+			sourceTree = "<group>";
+		};
+		CD3322711DFEEA5A003176B0 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		CD3FF9CB1DDE9E1200A204F4 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				CD95DF981E044DE200CB5A91 /* BarrageRenderer */,
 				CD3124701DE988E10083D7AE /* fps */,
 				CDD95A171DE553C500E7FBF8 /* timer */,
 				CDD95A141DE5377200E7FBF8 /* carouselView */,
@@ -444,6 +513,66 @@
 				CDD95A111DE4756F00E7FBF8 /* cornerRadius */,
 			);
 			path = lib;
+			sourceTree = "<group>";
+		};
+		CD4E51631E03896000A02190 /* clssses */ = {
+			isa = PBXGroup;
+			children = (
+				CD2667541DF6F54C00D335F9 /* player */,
+				CDC704AB1DF551F900230AC9 /* webView */,
+				CD0AE44B1DE2B9DB00FCE7E0 /* Main */,
+				CD0AE4501DE2CE3900FCE7E0 /* Home */,
+			);
+			name = clssses;
+			sourceTree = "<group>";
+		};
+		CD4E51641E03898A00A02190 /* customuis */ = {
+			isa = PBXGroup;
+			children = (
+				CD7CD1FB1DDDA2A1007F0628 /* slideMenu.swift */,
+				CD7CD1E31DDC8F7C007F0628 /* ZHNrabbitFreshBaseViewController.swift */,
+			);
+			name = customuis;
+			sourceTree = "<group>";
+		};
+		CD67493B1DFEDFAE005C7AC3 /* liveplayer */ = {
+			isa = PBXGroup;
+			children = (
+				CD2667571DF6FC5400D335F9 /* ZHNbilibiliLivePlayerViewController.swift */,
+				CD3322711DFEEA5A003176B0 /* model */,
+				CD3322701DFEEA51003176B0 /* viewModel */,
+				CD67493D1DFEDFD2005C7AC3 /* view */,
+			);
+			name = liveplayer;
+			path = view;
+			sourceTree = "<group>";
+		};
+		CD67493C1DFEDFBE005C7AC3 /* normalplayer */ = {
+			isa = PBXGroup;
+			children = (
+				CD781BF71E01ABC600A1ABD6 /* videoUrlHelper */,
+				CD781BE81E01993D00A1ABD6 /* models */,
+				CD781BE51E0198EA00A1ABD6 /* viewModels */,
+				CD91B7DD1DFFBCEA001A1BDE /* controller */,
+				CD91B7DC1DFFBCE0001A1BDE /* view */,
+			);
+			name = normalplayer;
+			path = view;
+			sourceTree = "<group>";
+		};
+		CD67493D1DFEDFD2005C7AC3 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				CD00FB951DFC36DA009DF326 /* ZHNlivePlayFullScreenMenuView.swift */,
+				CD00FB991DFC4477009DF326 /* ZHNlivePlayNoramlMenuView.swift */,
+				CDA8A1C21DFD89E400B790E2 /* ZHNliveFullScreenMenuViewBottom.swift */,
+				CDA8A1C41DFD89F800B790E2 /* ZHNliveFullScreenMenuViewBottom.xib */,
+				CDA8A1BE1DFD872000B790E2 /* ZHNliveFullScreenMenuViewTop.swift */,
+				CDA8A1C01DFD872700B790E2 /* ZHNliveFullScreenMenuViewTop.xib */,
+				CD67493E1DFEE14A005C7AC3 /* ZHNliveDetailView.swift */,
+				CD6749401DFEE154005C7AC3 /* ZHNliveDetailView.xib */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 		CD6A3EDB1DEC5A19002742A5 /* live(直播) */ = {
@@ -494,6 +623,31 @@
 			path = views;
 			sourceTree = "<group>";
 		};
+		CD781BE51E0198EA00A1ABD6 /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CD781BE61E01992200A1ABD6 /* ZHNnormalPlayerViewModel.swift */,
+			);
+			name = viewModels;
+			sourceTree = "<group>";
+		};
+		CD781BE81E01993D00A1ABD6 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				CD781BE91E01997300A1ABD6 /* ZHHnormalPayerItemModel.swift */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		CD781BF71E01ABC600A1ABD6 /* videoUrlHelper */ = {
+			isa = PBXGroup;
+			children = (
+				CD781BF81E01ABDD00A1ABD6 /* VideoURL.h */,
+				CD781BF91E01ABDD00A1ABD6 /* VideoURL.m */,
+			);
+			name = videoUrlHelper;
+			sourceTree = "<group>";
+		};
 		CD7CD1A91DDC8F4D007F0628 = {
 			isa = PBXGroup;
 			children = (
@@ -519,17 +673,14 @@
 		CD7CD1B41DDC8F4D007F0628 /* zhnbilibili */ = {
 			isa = PBXGroup;
 			children = (
-				CDD95A0D1DE4754800E7FBF8 /* zhnbilibili-Bridging-Header.h */,
-				CD7CD1B51DDC8F4D007F0628 /* AppDelegate.swift */,
+				CD4E51641E03898A00A02190 /* customuis */,
 				CD3FF9CB1DDE9E1200A204F4 /* lib */,
 				CD7CD1F41DDD5711007F0628 /* helpers */,
 				CD7CD1EF1DDC940E007F0628 /* configs */,
 				CD7CD1E61DDC902F007F0628 /* extensions */,
-				CD2667541DF6F54C00D335F9 /* player */,
-				CDC704AB1DF551F900230AC9 /* webView */,
-				CD0AE45B1DE2DD2900FCE7E0 /* Base */,
-				CD0AE44B1DE2B9DB00FCE7E0 /* Main */,
-				CD0AE4501DE2CE3900FCE7E0 /* Home */,
+				CD4E51631E03896000A02190 /* clssses */,
+				CDD95A0D1DE4754800E7FBF8 /* zhnbilibili-Bridging-Header.h */,
+				CD7CD1B51DDC8F4D007F0628 /* AppDelegate.swift */,
 				CD7CD1B91DDC8F4D007F0628 /* Main.storyboard */,
 				CD7CD1BC1DDC8F4D007F0628 /* Assets.xcassets */,
 				CD7CD1BE1DDC8F4D007F0628 /* LaunchScreen.storyboard */,
@@ -572,6 +723,7 @@
 				CD0B0E371DF2FEAB003A160E /* UIView+cornerradiusAdd.swift */,
 				CD0B0E411DF4556A003A160E /* Int+seasonAdd.swift */,
 				CDA8A1C81DFD9FE400B790E2 /* UIView+captureImage.swift */,
+				CD4E51601E0307FB00A02190 /* TimeInterval+playerAdd.swift */,
 			);
 			name = extensions;
 			path = extension;
@@ -598,27 +750,105 @@
 			path = helpers;
 			sourceTree = "<group>";
 		};
+		CD91B7DC1DFFBCE0001A1BDE /* view */ = {
+			isa = PBXGroup;
+			children = (
+				CD91B7DE1DFFBDF5001A1BDE /* playerBlurView.swift */,
+				CD4E515A1E02E25600A02190 /* normalPlayerLoadingMaskView.swift */,
+				CD4E515C1E02EBEA00A02190 /* ZHNnormalPlayWindowMenuVIew.swift */,
+				CD95DF8E1E042F5000CB5A91 /* ZHNnormalPlayFullScreenMenuView.swift */,
+				CD95DF901E0430AD00CB5A91 /* ZHNnormalFullScreenTop.swift */,
+				CD95DF941E0430C700CB5A91 /* ZHNnormalFullScreenTop.xib */,
+				CD95DF921E0430B800CB5A91 /* ZHNnormalFullScreenBottom.swift */,
+				CD95DF961E0430D700CB5A91 /* ZHNnormalFullScreenBottom.xib */,
+				CD4E515E1E03008400A02190 /* playCustomSlider.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		CD91B7DD1DFFBCEA001A1BDE /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				CD3322741DFEF211003176B0 /* ZHNnormalPlayerViewController.swift */,
+				CD3322781DFEF68D003176B0 /* ZHNnormalPlayerDetailTableViewController.swift */,
+				CD33227A1DFEF6A4003176B0 /* ZHNnormalPlayerCommondTableViewController.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		CD95DF981E044DE200CB5A91 /* BarrageRenderer */ = {
+			isa = PBXGroup;
+			children = (
+				CD95DF991E044DE200CB5A91 /* BarrageEngine */,
+				CD95DFA61E044DE200CB5A91 /* BarrageHeader.h */,
+				CD95DFA71E044DE200CB5A91 /* BarrageLoader */,
+				CD95DFAA1E044DE200CB5A91 /* BarrageSprite */,
+			);
+			path = BarrageRenderer;
+			sourceTree = "<group>";
+		};
+		CD95DF991E044DE200CB5A91 /* BarrageEngine */ = {
+			isa = PBXGroup;
+			children = (
+				CD95DF9A1E044DE200CB5A91 /* BarrageCanvas.h */,
+				CD95DF9B1E044DE200CB5A91 /* BarrageCanvas.m */,
+				CD95DF9C1E044DE200CB5A91 /* BarrageClock.h */,
+				CD95DF9D1E044DE200CB5A91 /* BarrageClock.m */,
+				CD95DF9E1E044DE200CB5A91 /* BarrageDescriptor.h */,
+				CD95DF9F1E044DE200CB5A91 /* BarrageDescriptor.m */,
+				CD95DFA01E044DE200CB5A91 /* BarrageDispatcher.h */,
+				CD95DFA11E044DE200CB5A91 /* BarrageDispatcher.m */,
+				CD95DFA21E044DE200CB5A91 /* BarrageRenderer.h */,
+				CD95DFA31E044DE200CB5A91 /* BarrageRenderer.m */,
+				CD95DFA41E044DE200CB5A91 /* BarrageSpriteFactory.h */,
+				CD95DFA51E044DE200CB5A91 /* BarrageSpriteFactory.m */,
+			);
+			path = BarrageEngine;
+			sourceTree = "<group>";
+		};
+		CD95DFA71E044DE200CB5A91 /* BarrageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				CD95DFA81E044DE200CB5A91 /* BarrageLoader.h */,
+				CD95DFA91E044DE200CB5A91 /* BarrageLoader.m */,
+			);
+			path = BarrageLoader;
+			sourceTree = "<group>";
+		};
+		CD95DFAA1E044DE200CB5A91 /* BarrageSprite */ = {
+			isa = PBXGroup;
+			children = (
+				CD95DFAB1E044DE200CB5A91 /* BarrageFloatImageSprite.h */,
+				CD95DFAC1E044DE200CB5A91 /* BarrageFloatImageSprite.m */,
+				CD95DFAD1E044DE200CB5A91 /* BarrageFloatSprite.h */,
+				CD95DFAE1E044DE200CB5A91 /* BarrageFloatSprite.m */,
+				CD95DFAF1E044DE200CB5A91 /* BarrageFloatTextSprite.h */,
+				CD95DFB01E044DE200CB5A91 /* BarrageFloatTextSprite.m */,
+				CD95DFB11E044DE200CB5A91 /* BarrageSprite.h */,
+				CD95DFB21E044DE200CB5A91 /* BarrageSprite.m */,
+				CD95DFB31E044DE200CB5A91 /* BarrageSpriteProtocol.h */,
+				CD95DFB41E044DE200CB5A91 /* BarrageSpriteUtility.h */,
+				CD95DFB51E044DE200CB5A91 /* BarrageSpriteUtility.m */,
+				CD95DFB61E044DE200CB5A91 /* BarrageWalkImageSprite.h */,
+				CD95DFB71E044DE200CB5A91 /* BarrageWalkImageSprite.m */,
+				CD95DFB81E044DE200CB5A91 /* BarrageWalkSprite.h */,
+				CD95DFB91E044DE200CB5A91 /* BarrageWalkSprite.m */,
+				CD95DFBA1E044DE200CB5A91 /* BarrageWalkTextSprite.h */,
+				CD95DFBB1E044DE200CB5A91 /* BarrageWalkTextSprite.m */,
+			);
+			path = BarrageSprite;
+			sourceTree = "<group>";
+		};
 		CDA8A1BA1DFD445300B790E2 /* base */ = {
 			isa = PBXGroup;
 			children = (
+				CD6749391DFEDD2C005C7AC3 /* ZHNPlayerBaseViewController.swift */,
 				CD00FB971DFC40C7009DF326 /* ZHNplayerMenuBaseView.swift */,
 				CDA8A1B61DFD08BA00B790E2 /* ZHNloadingProgressView.swift */,
-				CDA8A1C21DFD89E400B790E2 /* ZHNliveFullScreenMenuViewBottom.swift */,
-				CDA8A1C41DFD89F800B790E2 /* ZHNliveFullScreenMenuViewBottom.xib */,
-				CDA8A1BE1DFD872000B790E2 /* ZHNliveFullScreenMenuViewTop.swift */,
-				CDA8A1C01DFD872700B790E2 /* ZHNliveFullScreenMenuViewTop.xib */,
-			);
-			name = base;
-			sourceTree = "<group>";
-		};
-		CDA8A1BB1DFD445D00B790E2 /* menu */ = {
-			isa = PBXGroup;
-			children = (
-				CD00FB951DFC36DA009DF326 /* ZHNlivePlayFullScreenMenuView.swift */,
-				CD00FB991DFC4477009DF326 /* ZHNlivePlayNoramlMenuView.swift */,
 				CD2959601DF9506700280E98 /* ZHNplayerUrlLoadingBackView.swift */,
 			);
-			name = menu;
+			name = base;
+			path = view;
 			sourceTree = "<group>";
 		};
 		CDC704AB1DF551F900230AC9 /* webView */ = {
@@ -849,9 +1079,12 @@
 				CDA8A1C11DFD872700B790E2 /* ZHNliveFullScreenMenuViewTop.xib in Resources */,
 				CD7CD1C01DDC8F4D007F0628 /* LaunchScreen.storyboard in Resources */,
 				CD7157091DEE712F008B628A /* HomeLiveHeadMenu.xib in Resources */,
+				CD6749411DFEE154005C7AC3 /* ZHNliveDetailView.xib in Resources */,
 				CD0B0E341DF2F6CF003A160E /* HomeBangumiMenuView.xib in Resources */,
+				CD95DF951E0430C700CB5A91 /* ZHNnormalFullScreenTop.xib in Resources */,
 				CD7CD1BD1DDC8F4D007F0628 /* Assets.xcassets in Resources */,
 				CD7CD1BB1DDC8F4D007F0628 /* Main.storyboard in Resources */,
+				CD95DF971E0430D700CB5A91 /* ZHNnormalFullScreenBottom.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -926,37 +1159,58 @@
 			files = (
 				CDD95A1F1DE5BFD400E7FBF8 /* recommendFoot.swift in Sources */,
 				CD991BCE1DE408FD007BB093 /* normalBaseCell.swift in Sources */,
-				CD2667561DF6F58900D335F9 /* ZHNbilibiliPlayerViewController.swift in Sources */,
 				CDE587F61DE817A6005F4DFC /* recommendSectionReloadModel.swift in Sources */,
 				CDD95A1D1DE577D100E7FBF8 /* recommondhead.swift in Sources */,
 				CD6A3ECC1DEB07D0002742A5 /* commenAreaCell.swift in Sources */,
+				CD95DFBF1E044DE200CB5A91 /* BarrageDispatcher.m in Sources */,
 				CDA8A1B71DFD08BA00B790E2 /* ZHNloadingProgressView.swift in Sources */,
+				CD67493F1DFEE14A005C7AC3 /* ZHNliveDetailView.swift in Sources */,
+				CD95DFCA1E044DE200CB5A91 /* BarrageWalkTextSprite.m in Sources */,
 				CD0B0E3A1DF3007F003A160E /* HomeBangumiTopView.swift in Sources */,
 				CDF6D4411DEEC94C000ACF38 /* HomebangumiViewController.swift in Sources */,
 				CD7CD1FE1DDDAB75007F0628 /* UIGestureRecognizer+zhnAdd.swift in Sources */,
 				CDC31B601DE3EFDE00EADC2A /* collectionNormalHeader.swift in Sources */,
+				CD95DFC31E044DE200CB5A91 /* BarrageFloatImageSprite.m in Sources */,
 				CD55491A1DE6DE8C007D4C7F /* recommendActivityCell.swift in Sources */,
+				CD3322731DFEEA81003176B0 /* ZHNlivePlayDetailViewModel.swift in Sources */,
+				CD781BEA1E01997300A1ABD6 /* ZHHnormalPayerItemModel.swift in Sources */,
 				CD0AE4561DE2CE7D00FCE7E0 /* HomeViewController.swift in Sources */,
 				CD3FF9C61DDDEDAF00A204F4 /* ZHNnetworkTool.swift in Sources */,
+				CD95DFBC1E044DE200CB5A91 /* BarrageCanvas.m in Sources */,
 				CD6A3EE31DEC5ED8002742A5 /* homeLiveModel.swift in Sources */,
 				CD6A3EE51DEC65CC002742A5 /* HomeLiveViewModel.swift in Sources */,
+				CD95DFC51E044DE200CB5A91 /* BarrageFloatTextSprite.m in Sources */,
+				CD95DFC11E044DE200CB5A91 /* BarrageSpriteFactory.m in Sources */,
 				CD0B0E321DF2F6C3003A160E /* HomeBangumiMenuView.swift in Sources */,
+				CD4E515F1E03008400A02190 /* playCustomSlider.swift in Sources */,
 				CD2667581DF6FC5400D335F9 /* ZHNbilibiliLivePlayerViewController.swift in Sources */,
 				CD6A3EE91DEC667F002742A5 /* HomeLiveShowViewController.swift in Sources */,
 				CD7CD1EC1DDC902F007F0628 /* UIView+frameAdd.swift in Sources */,
 				CD0AE46D1DE3317B00FCE7E0 /* ZHNjsonHelper.swift in Sources */,
+				CD95DFBD1E044DE200CB5A91 /* BarrageClock.m in Sources */,
 				CD6A3ED21DEBFF10002742A5 /* banmikuShowCell.swift in Sources */,
 				CDC704AF1DF5573500230AC9 /* customNaviBar.swift in Sources */,
+				CD95DFC81E044DE200CB5A91 /* BarrageWalkImageSprite.m in Sources */,
+				CD95DF8F1E042F5000CB5A91 /* ZHNnormalPlayFullScreenMenuView.swift in Sources */,
+				CD4E515B1E02E25600A02190 /* normalPlayerLoadingMaskView.swift in Sources */,
 				CD7CD1EA1DDC902F007F0628 /* UIColor+zhnAdd.swift in Sources */,
+				CD95DFC01E044DE200CB5A91 /* BarrageRenderer.m in Sources */,
+				CD95DFC61E044DE200CB5A91 /* BarrageSprite.m in Sources */,
+				CD33227B1DFEF6A4003176B0 /* ZHNnormalPlayerCommondTableViewController.swift in Sources */,
 				CDA8A1C31DFD89E400B790E2 /* ZHNliveFullScreenMenuViewBottom.swift in Sources */,
 				CD7157051DEDA90E008B628A /* homeLivehead.swift in Sources */,
 				CD6A3ED01DEBCF7F002742A5 /* liveShowCell.swift in Sources */,
 				CD0B0E421DF4556A003A160E /* Int+seasonAdd.swift in Sources */,
 				CD0AE46B1DE3305B00FCE7E0 /* Array+toJsonString.swift in Sources */,
+				CD95DFC41E044DE200CB5A91 /* BarrageFloatSprite.m in Sources */,
 				CD3FF9CD1DDEA04D00A204F4 /* String+zhnAdd.swift in Sources */,
 				CDA8A1C71DFD9CBC00B790E2 /* ZHNplayFullScreenMenuViewActionModel.swift in Sources */,
 				CDD95A101DE4754900E7FBF8 /* HJCornerRadius.m in Sources */,
+				CD4E515D1E02EBEA00A02190 /* ZHNnormalPlayWindowMenuVIew.swift in Sources */,
+				CD95DFC71E044DE200CB5A91 /* BarrageSpriteUtility.m in Sources */,
+				CD95DF931E0430B800CB5A91 /* ZHNnormalFullScreenBottom.swift in Sources */,
 				CD0AE4631DE2ED2400FCE7E0 /* recommendModel.swift in Sources */,
+				CD781BE71E01992200A1ABD6 /* ZHNnormalPlayerViewModel.swift in Sources */,
 				CDF6D43A1DEEA3DA000ACF38 /* HomeLiveReloadURLhelper.swift in Sources */,
 				CD7CD1EB1DDC902F007F0628 /* UIimageView+gifAdd.swift in Sources */,
 				CD2959651DF99B3A00280E98 /* UIImage+resizingImage.swift in Sources */,
@@ -966,34 +1220,44 @@
 				CDA8A1BD1DFD803500B790E2 /* ZHNnetWorkTypeHelper.swift in Sources */,
 				CD0DC7511DEF083E00843890 /* HomeBangumiViewModel.swift in Sources */,
 				CD2959611DF9506700280E98 /* ZHNplayerUrlLoadingBackView.swift in Sources */,
+				CD91B7DF1DFFBDF5001A1BDE /* playerBlurView.swift in Sources */,
+				CD3322791DFEF68D003176B0 /* ZHNnormalPlayerDetailTableViewController.swift in Sources */,
 				CD3124761DE989F40083D7AE /* JPFPSStatus.m in Sources */,
 				CDD95A161DE537B600E7FBF8 /* ZHNCarouselView.swift in Sources */,
 				CDC704AD1DF552F400230AC9 /* ZHNbilibiliWebViewController.swift in Sources */,
 				CD0B0E3C1DF3E8F1003A160E /* HomeBangumiNormalHead.swift in Sources */,
 				CD6192A51DF50951006D6E55 /* HomeBangumiRecommendCell.swift in Sources */,
 				CD0AE44F1DE2BA8600FCE7E0 /* MainTabbarViewController.swift in Sources */,
+				CD3322751DFEF211003176B0 /* ZHNnormalPlayerViewController.swift in Sources */,
 				CD7CD1B61DDC8F4D007F0628 /* AppDelegate.swift in Sources */,
+				CD95DFC91E044DE200CB5A91 /* BarrageWalkSprite.m in Sources */,
 				CDA8A1BF1DFD872000B790E2 /* ZHNliveFullScreenMenuViewTop.swift in Sources */,
 				CD0AE4671DE2F3CE00FCE7E0 /* recommendViewModel.swift in Sources */,
+				CD95DFC21E044DE200CB5A91 /* BarrageLoader.m in Sources */,
 				CD0AE4611DE2E3D300FCE7E0 /* HomeRecommendViewController.swift in Sources */,
 				CDD95A191DE553D300E7FBF8 /* SwiftTimer.swift in Sources */,
 				CD7CD1E41DDC8F7C007F0628 /* ZHNrabbitFreshBaseViewController.swift in Sources */,
 				CDCD9FBC1DF05843007D7188 /* configs.swift in Sources */,
 				CD3FF9C81DDE084400A204F4 /* SwiftNotice.swift in Sources */,
 				CD0AE45A1DE2DB1200FCE7E0 /* MainCustomNaViController.swift in Sources */,
+				CD95DF911E0430AD00CB5A91 /* ZHNnormalFullScreenTop.swift in Sources */,
 				CDA8A1C91DFD9FE400B790E2 /* UIView+captureImage.swift in Sources */,
 				CD0B0E3E1DF44E30003A160E /* HomeBangumiTopFoot.swift in Sources */,
+				CD781BFC1E01ABDD00A1ABD6 /* VideoURL.m in Sources */,
 				CD7157071DEE7126008B628A /* HomeLiveHeadMenu.swift in Sources */,
 				CD00FB9C1DFC46E9009DF326 /* ZHNplayNormalMenuViewActionModel.swift in Sources */,
 				CD00FB981DFC40C7009DF326 /* ZHNplayerMenuBaseView.swift in Sources */,
+				CD67493A1DFEDD2C005C7AC3 /* ZHNPlayerBaseViewController.swift in Sources */,
 				CD6A3ECE1DEBCDDB002742A5 /* Int+coutdealAdd.swift in Sources */,
 				CDE587F81DE81A09005F4DFC /* recommendURLhelper.swift in Sources */,
 				CD71570B1DEE9405008B628A /* HomeLiveFoot.swift in Sources */,
 				CD6A3ED41DEC0F49002742A5 /* Date+timeBucket.swift in Sources */,
+				CD95DFBE1E044DE200CB5A91 /* BarrageDescriptor.m in Sources */,
 				CDCD9FBA1DF056E4007D7188 /* HomeBangumiNormalCell.swift in Sources */,
 				CD0DC74F1DEF037200843890 /* HomeBangumiModel.swift in Sources */,
 				CD2959731DF9B56400280E98 /* ZHNplayerUrlLoadingBackViewActionModel.swift in Sources */,
 				CD26675B1DF83A9700D335F9 /* ZHNnotificationHelper.swift in Sources */,
+				CD4E51611E0307FB00A02190 /* TimeInterval+playerAdd.swift in Sources */,
 				CD00FB961DFC36DA009DF326 /* ZHNlivePlayFullScreenMenuView.swift in Sources */,
 				CD7CD1FC1DDDA2A1007F0628 /* slideMenu.swift in Sources */,
 				CD0B0E381DF2FEAB003A160E /* UIView+cornerradiusAdd.swift in Sources */,
