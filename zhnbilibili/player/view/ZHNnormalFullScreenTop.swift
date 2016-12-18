@@ -18,4 +18,8 @@ class ZHNnormalFullScreenTop: UIView {
         return Bundle.main.loadNibNamed("ZHNnormalFullScreenTop", owner: self, options: nil)?.last as! ZHNnormalFullScreenTop
     }
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.backgroundColor = UIColor.ZHNcolor(red: 0, green: 0, blue: 0, alpha: 0.3)
+    }
 }

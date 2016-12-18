@@ -18,7 +18,6 @@ class ZHNbilibiliLivePlayerViewController: ZHNPlayerBaseViewController {
         }
     }
     
-    
     lazy var detailView: ZHNliveDetailView = {
         let detailView = ZHNliveDetailView.instanceView()
         return detailView

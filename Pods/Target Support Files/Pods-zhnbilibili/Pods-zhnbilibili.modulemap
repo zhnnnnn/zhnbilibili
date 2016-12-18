@@ -1,0 +1,6 @@
+framework module Pods_zhnbilibili {
+  umbrella header "Pods-zhnbilibili-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -17,7 +17,7 @@ class ZHNnormalPlayerViewController: ZHNPlayerBaseViewController {
     var itemModel: itemDetailModel?
     /// 判断是否需要滑动的效果
     var watced = false
-    // viewmodel
+    /// viewmodel
     var playItemVM: ZHNnormalPlayerViewModel = ZHNnormalPlayerViewModel()
     
     // MARK: - 懒加载控件
@@ -99,9 +99,11 @@ class ZHNnormalPlayerViewController: ZHNPlayerBaseViewController {
         liveContainerView.isHidden = true
        
         // 
-        playItemVM.requestData(aid: (itemModel?.param)!, finishCallBack: { 
+        playItemVM.requestData(aid: (itemModel?.param)!, finishCallBack: { [weak self] in
             DispatchQueue.main.async {
-                self.loadingMaskView.removeFromSuperview()
+                self?.loadingMaskView.removeFromSuperview()
+                self?.danmuView.danmuModelArray = self?.playItemVM.danmuModelArray
+                self?.danmuView.startRender()
             }
             }) {
         }
@@ -153,21 +155,20 @@ extension ZHNnormalPlayerViewController {
 //======================================================================
 extension ZHNnormalPlayerViewController {
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        // 1. 滑动
         if keyPath == "contentOffset" {
-           
             if watced {return}
-            
-            // 1. 拿到滑动的offset
+            // <1. 拿到滑动的offset
             guard let NSoffset = change?[NSKeyValueChangeKey.newKey] else {return}
             guard let CGoffset  = (NSoffset as AnyObject).cgPointValue else {return}
-            // 2. 计算值(考虑边界的值)
+            // <2. 计算值(考虑边界的值)
             var delta = knormalPlayerHeight - CGoffset.y * 0.5
             if delta < knavibarheight {
                 delta = knavibarheight
             }else if delta > knormalPlayerHeight {
                 delta = knormalPlayerHeight
             }
-            // 3. 滑动控件
+            // <3. 滑动控件
             slideMenuContainer.setY(Y: delta)
             contentScrollView.setY(Y: delta+kslideMenuViewHeight)
             blurView.setHeight(H: delta)

@@ -7,3 +7,4 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "VideoURL.h"
 #import "BarrageHeader.h"
+#import "XMLReader.h"

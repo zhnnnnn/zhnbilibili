@@ -86,6 +86,12 @@ class ZHNPlayerBaseViewController: UIViewController {
         loadingProgressView.isHidden = true
         return loadingProgressView
     }()
+    
+    lazy var danmuView: ZHNdanmuView = {
+        let danmuView = ZHNdanmuView()
+        return danmuView
+    }()
+    
     lazy var normalPlayerWindowMenuView: ZHNnormalPlayWindowMenuVIew = {
         let normalPlayerWindowMenuView = ZHNnormalPlayWindowMenuVIew()
         normalPlayerWindowMenuView.seekTimeSlider.addTarget(self, action: #selector(sliderTouchUpInside(slider:)), for: .touchUpInside)
@@ -96,6 +102,7 @@ class ZHNPlayerBaseViewController: UIViewController {
         normalPlayerWindowMenuView.isHidden = true
         return normalPlayerWindowMenuView
     }()
+    
     lazy var normalPlayerFullScreenMenuView: ZHNnormalPlayFullScreenMenuView = {
         let normalPlayerFullScreenMenuView = ZHNnormalPlayFullScreenMenuView()
         normalPlayerFullScreenMenuView.bottomMenu.seekTimeSlider.addTarget(self, action: #selector(sliderTouchUpInside(slider:)), for: .touchUpInside)
@@ -179,6 +186,11 @@ extension ZHNPlayerBaseViewController {
         player?.view.snp.makeConstraints({ (make) in
             make.edges.equalTo(UIEdgeInsets.zero)
         })
+        
+        liveContainerView.addSubview(danmuView)
+        danmuView.snp.makeConstraints { (make) in
+            make.edges.equalTo(UIEdgeInsets.zero)
+        }
         
         liveContainerView.addSubview(bilibiliLiveIcon)
         bilibiliLiveIcon.snp.makeConstraints { (make) in

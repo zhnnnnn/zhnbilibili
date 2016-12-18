@@ -48,6 +48,7 @@
 		CD4E515D1E02EBEA00A02190 /* ZHNnormalPlayWindowMenuVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E515C1E02EBEA00A02190 /* ZHNnormalPlayWindowMenuVIew.swift */; };
 		CD4E515F1E03008400A02190 /* playCustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E515E1E03008400A02190 /* playCustomSlider.swift */; };
 		CD4E51611E0307FB00A02190 /* TimeInterval+playerAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E51601E0307FB00A02190 /* TimeInterval+playerAdd.swift */; };
+		CD54D7031E06710B0011B935 /* ZHNdanmuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54D7021E06710B0011B935 /* ZHNdanmuView.swift */; };
 		CD55491A1DE6DE8C007D4C7F /* recommendActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5549191DE6DE8C007D4C7F /* recommendActivityCell.swift */; };
 		CD6192A51DF50951006D6E55 /* HomeBangumiRecommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6192A41DF50951006D6E55 /* HomeBangumiRecommendCell.swift */; };
 		CD67493A1DFEDD2C005C7AC3 /* ZHNPlayerBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6749391DFEDD2C005C7AC3 /* ZHNPlayerBaseViewController.swift */; };
@@ -65,6 +66,7 @@
 		CD7157071DEE7126008B628A /* HomeLiveHeadMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7157061DEE7126008B628A /* HomeLiveHeadMenu.swift */; };
 		CD7157091DEE712F008B628A /* HomeLiveHeadMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD7157081DEE712F008B628A /* HomeLiveHeadMenu.xib */; };
 		CD71570B1DEE9405008B628A /* HomeLiveFoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD71570A1DEE9405008B628A /* HomeLiveFoot.swift */; };
+		CD7332D11E06F13900DF31E8 /* UIColor+hexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7332D01E06F13900DF31E8 /* UIColor+hexColor.swift */; };
 		CD781BE71E01992200A1ABD6 /* ZHNnormalPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD781BE61E01992200A1ABD6 /* ZHNnormalPlayerViewModel.swift */; };
 		CD781BEA1E01997300A1ABD6 /* ZHHnormalPayerItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD781BE91E01997300A1ABD6 /* ZHHnormalPayerItemModel.swift */; };
 		CD781BFC1E01ABDD00A1ABD6 /* VideoURL.m in Sources */ = {isa = PBXBuildFile; fileRef = CD781BF91E01ABDD00A1ABD6 /* VideoURL.m */; };
@@ -102,6 +104,8 @@
 		CD95DFC81E044DE200CB5A91 /* BarrageWalkImageSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = CD95DFB71E044DE200CB5A91 /* BarrageWalkImageSprite.m */; };
 		CD95DFC91E044DE200CB5A91 /* BarrageWalkSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = CD95DFB91E044DE200CB5A91 /* BarrageWalkSprite.m */; };
 		CD95DFCA1E044DE200CB5A91 /* BarrageWalkTextSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = CD95DFBB1E044DE200CB5A91 /* BarrageWalkTextSprite.m */; };
+		CD95DFCE1E05644B00CB5A91 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = CD95DFCD1E05644B00CB5A91 /* XMLReader.m */; };
+		CD95DFD01E058D1000CB5A91 /* danmuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD95DFCF1E058D1000CB5A91 /* danmuModel.swift */; };
 		CD991BCE1DE408FD007BB093 /* normalBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD991BCD1DE408FD007BB093 /* normalBaseCell.swift */; };
 		CDA8A1B71DFD08BA00B790E2 /* ZHNloadingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA8A1B61DFD08BA00B790E2 /* ZHNloadingProgressView.swift */; };
 		CDA8A1BD1DFD803500B790E2 /* ZHNnetWorkTypeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA8A1BC1DFD803500B790E2 /* ZHNnetWorkTypeHelper.swift */; };
@@ -200,6 +204,7 @@
 		CD4E515C1E02EBEA00A02190 /* ZHNnormalPlayWindowMenuVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNnormalPlayWindowMenuVIew.swift; sourceTree = "<group>"; };
 		CD4E515E1E03008400A02190 /* playCustomSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = playCustomSlider.swift; sourceTree = "<group>"; };
 		CD4E51601E0307FB00A02190 /* TimeInterval+playerAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+playerAdd.swift"; sourceTree = "<group>"; };
+		CD54D7021E06710B0011B935 /* ZHNdanmuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNdanmuView.swift; sourceTree = "<group>"; };
 		CD5549191DE6DE8C007D4C7F /* recommendActivityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recommendActivityCell.swift; sourceTree = "<group>"; };
 		CD6192A41DF50951006D6E55 /* HomeBangumiRecommendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBangumiRecommendCell.swift; sourceTree = "<group>"; };
 		CD6749391DFEDD2C005C7AC3 /* ZHNPlayerBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZHNPlayerBaseViewController.swift; path = ../ZHNPlayerBaseViewController.swift; sourceTree = "<group>"; };
@@ -217,6 +222,7 @@
 		CD7157061DEE7126008B628A /* HomeLiveHeadMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLiveHeadMenu.swift; sourceTree = "<group>"; };
 		CD7157081DEE712F008B628A /* HomeLiveHeadMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeLiveHeadMenu.xib; sourceTree = "<group>"; };
 		CD71570A1DEE9405008B628A /* HomeLiveFoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLiveFoot.swift; sourceTree = "<group>"; };
+		CD7332D01E06F13900DF31E8 /* UIColor+hexColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+hexColor.swift"; sourceTree = "<group>"; };
 		CD781BE61E01992200A1ABD6 /* ZHNnormalPlayerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNnormalPlayerViewModel.swift; sourceTree = "<group>"; };
 		CD781BE91E01997300A1ABD6 /* ZHHnormalPayerItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHHnormalPayerItemModel.swift; sourceTree = "<group>"; };
 		CD781BF81E01ABDD00A1ABD6 /* VideoURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoURL.h; sourceTree = "<group>"; };
@@ -278,6 +284,9 @@
 		CD95DFB91E044DE200CB5A91 /* BarrageWalkSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageWalkSprite.m; sourceTree = "<group>"; };
 		CD95DFBA1E044DE200CB5A91 /* BarrageWalkTextSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageWalkTextSprite.h; sourceTree = "<group>"; };
 		CD95DFBB1E044DE200CB5A91 /* BarrageWalkTextSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageWalkTextSprite.m; sourceTree = "<group>"; };
+		CD95DFCC1E05644B00CB5A91 /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
+		CD95DFCD1E05644B00CB5A91 /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
+		CD95DFCF1E058D1000CB5A91 /* danmuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = danmuModel.swift; sourceTree = "<group>"; };
 		CD991BCD1DE408FD007BB093 /* normalBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = normalBaseCell.swift; sourceTree = "<group>"; };
 		CDA8A1B61DFD08BA00B790E2 /* ZHNloadingProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNloadingProgressView.swift; sourceTree = "<group>"; };
 		CDA8A1BC1DFD803500B790E2 /* ZHNnetWorkTypeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNnetWorkTypeHelper.swift; sourceTree = "<group>"; };
@@ -505,6 +514,7 @@
 		CD3FF9CB1DDE9E1200A204F4 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				CD95DFCB1E05643700CB5A91 /* XMLReader */,
 				CD95DF981E044DE200CB5A91 /* BarrageRenderer */,
 				CD3124701DE988E10083D7AE /* fps */,
 				CDD95A171DE553C500E7FBF8 /* timer */,
@@ -635,6 +645,7 @@
 			isa = PBXGroup;
 			children = (
 				CD781BE91E01997300A1ABD6 /* ZHHnormalPayerItemModel.swift */,
+				CD95DFCF1E058D1000CB5A91 /* danmuModel.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -724,6 +735,7 @@
 				CD0B0E411DF4556A003A160E /* Int+seasonAdd.swift */,
 				CDA8A1C81DFD9FE400B790E2 /* UIView+captureImage.swift */,
 				CD4E51601E0307FB00A02190 /* TimeInterval+playerAdd.swift */,
+				CD7332D01E06F13900DF31E8 /* UIColor+hexColor.swift */,
 			);
 			name = extensions;
 			path = extension;
@@ -762,6 +774,7 @@
 				CD95DF921E0430B800CB5A91 /* ZHNnormalFullScreenBottom.swift */,
 				CD95DF961E0430D700CB5A91 /* ZHNnormalFullScreenBottom.xib */,
 				CD4E515E1E03008400A02190 /* playCustomSlider.swift */,
+				CD54D7021E06710B0011B935 /* ZHNdanmuView.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -837,6 +850,16 @@
 				CD95DFBB1E044DE200CB5A91 /* BarrageWalkTextSprite.m */,
 			);
 			path = BarrageSprite;
+			sourceTree = "<group>";
+		};
+		CD95DFCB1E05643700CB5A91 /* XMLReader */ = {
+			isa = PBXGroup;
+			children = (
+				CD95DFCC1E05644B00CB5A91 /* XMLReader.h */,
+				CD95DFCD1E05644B00CB5A91 /* XMLReader.m */,
+			);
+			name = XMLReader;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		CDA8A1BA1DFD445300B790E2 /* base */ = {
@@ -1207,9 +1230,11 @@
 				CDA8A1C71DFD9CBC00B790E2 /* ZHNplayFullScreenMenuViewActionModel.swift in Sources */,
 				CDD95A101DE4754900E7FBF8 /* HJCornerRadius.m in Sources */,
 				CD4E515D1E02EBEA00A02190 /* ZHNnormalPlayWindowMenuVIew.swift in Sources */,
+				CD7332D11E06F13900DF31E8 /* UIColor+hexColor.swift in Sources */,
 				CD95DFC71E044DE200CB5A91 /* BarrageSpriteUtility.m in Sources */,
 				CD95DF931E0430B800CB5A91 /* ZHNnormalFullScreenBottom.swift in Sources */,
 				CD0AE4631DE2ED2400FCE7E0 /* recommendModel.swift in Sources */,
+				CD54D7031E06710B0011B935 /* ZHNdanmuView.swift in Sources */,
 				CD781BE71E01992200A1ABD6 /* ZHNnormalPlayerViewModel.swift in Sources */,
 				CDF6D43A1DEEA3DA000ACF38 /* HomeLiveReloadURLhelper.swift in Sources */,
 				CD7CD1EB1DDC902F007F0628 /* UIimageView+gifAdd.swift in Sources */,
@@ -1233,6 +1258,7 @@
 				CD95DFC91E044DE200CB5A91 /* BarrageWalkSprite.m in Sources */,
 				CDA8A1BF1DFD872000B790E2 /* ZHNliveFullScreenMenuViewTop.swift in Sources */,
 				CD0AE4671DE2F3CE00FCE7E0 /* recommendViewModel.swift in Sources */,
+				CD95DFCE1E05644B00CB5A91 /* XMLReader.m in Sources */,
 				CD95DFC21E044DE200CB5A91 /* BarrageLoader.m in Sources */,
 				CD0AE4611DE2E3D300FCE7E0 /* HomeRecommendViewController.swift in Sources */,
 				CDD95A191DE553D300E7FBF8 /* SwiftTimer.swift in Sources */,
@@ -1243,6 +1269,7 @@
 				CD95DF911E0430AD00CB5A91 /* ZHNnormalFullScreenTop.swift in Sources */,
 				CDA8A1C91DFD9FE400B790E2 /* UIView+captureImage.swift in Sources */,
 				CD0B0E3E1DF44E30003A160E /* HomeBangumiTopFoot.swift in Sources */,
+				CD95DFD01E058D1000CB5A91 /* danmuModel.swift in Sources */,
 				CD781BFC1E01ABDD00A1ABD6 /* VideoURL.m in Sources */,
 				CD7157071DEE7126008B628A /* HomeLiveHeadMenu.swift in Sources */,
 				CD00FB9C1DFC46E9009DF326 /* ZHNplayNormalMenuViewActionModel.swift in Sources */,

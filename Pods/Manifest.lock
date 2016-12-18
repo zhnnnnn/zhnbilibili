@@ -1,0 +1,38 @@
+PODS:
+  - Alamofire (4.0.1)
+  - DynamicBlurView (1.3.0)
+  - HandyJSON (1.2.1)
+  - Kingfisher (3.1.4)
+  - ReachabilitySwift (3)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - SnapKit (3.0.2)
+  - SwiftDate (4.0.7)
+  - SwiftyJSON (3.1.3)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0.0)
+  - DynamicBlurView
+  - HandyJSON (~> 1.2.1)
+  - Kingfisher (~> 3.1.1)
+  - ReachabilitySwift (~> 3)
+  - SDWebImage (~> 3.8)
+  - SnapKit (~> 3.0.2)
+  - SwiftDate (~> 4.0)
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  DynamicBlurView: ca9f6836d4123e20ac1636814077b278b34dd2a2
+  HandyJSON: c20190bca46cc6e7fb87073df63ecbe90770a7b0
+  Kingfisher: 6c67e3e57f2d81a9cfdfa25052cd86f33ceac9bb
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
+  SwiftDate: 0efb04a6751b1ab804049b2b09a69848cd304c12
+  SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
+
+PODFILE CHECKSUM: fd61cbf0a49ef80c9734a8bfa6d9f7a7e2f2f7f1
+
+COCOAPODS: 1.1.1

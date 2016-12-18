@@ -48,6 +48,7 @@ class ZHNnormalFullScreenBottom: UIView {
         self.addSubview(currentTimeLabel)
         self.addSubview(seekedTimeProgress)
         self.addSubview(seekTimeSlider)
+        self.backgroundColor = UIColor.ZHNcolor(red: 0, green: 0, blue: 0, alpha: 0.3)
     }
     
     override func layoutSubviews() {

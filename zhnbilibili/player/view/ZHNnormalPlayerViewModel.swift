@@ -15,7 +15,11 @@ let kgetPlayUrlSuccessNotification = Notification.Name("kgetPlayUrlSuccessNotifi
 
 class ZHNnormalPlayerViewModel {
 
+    /// 视频播放的url
     var playerUrl: String?
+    /// 弹幕的数据数组
+    var danmuModelArray: [danmuModel]?
+    
     
     func requestData(aid: Int,finishCallBack:@escaping ()->(),failueCallBack:@escaping ()->()) {
         
@@ -25,24 +29,37 @@ class ZHNnormalPlayerViewModel {
             let dict = resultJson["data"]["pages"].array?.first?.dictionaryObject
             guard let cid = dict?["cid"] as? Int else {return}
             guard let page = dict?["page"] as? Int else {return}
-            
+           
+            // ====
+            let group = DispatchGroup()
+            // 获取视频播放的url
+            group.enter()
             VideoURL.getWithAid(aid, cid: cid, page: page, completionBlock: { (url) in
                 guard let urlStr = url?.absoluteString else {return}
                 self.playerUrl = urlStr
                 NotificationCenter.default.post(name: kgetPlayUrlSuccessNotification, object: nil)
+                group.leave()
             })
-            
-            finishCallBack()
+            // 获取弹幕数据
+            self.requestDanmuStatus(cid: cid, group: group)
+            // 
+            group.notify(queue: DispatchQueue.main, execute: {
+                 finishCallBack()
+            })
+           
         }) { (error) in
                 failueCallBack()
         }
     }
     
     
-    func requestDanmuStatus() {
-        let URLString = "xaad"
-        Alamofire.request(URLString, method: .get, parameters: nil).responseData { (data) in
-            
+    func requestDanmuStatus(cid: Int,group: DispatchGroup) {
+        group.enter()
+        let URLString = "http://comment.bilibili.com/\(cid).xml"
+        Alamofire.request(URLString, method: .get, parameters: nil).responseData { (response) in
+            guard let result = try? XMLReader.dictionary(forXMLData: response.data) else {return}
+            self.danmuModelArray = danmuModel.modelArray(dict: result)
+            group.leave()
         }
     }
     
