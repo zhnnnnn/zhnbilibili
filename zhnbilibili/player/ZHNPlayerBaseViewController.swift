@@ -428,6 +428,8 @@ extension ZHNPlayerBaseViewController {
     
     @objc fileprivate func fullScreenAction() {
         
+        sliderStatusTimer = nil
+        addSliderStatusTimer()
         isfullScreen = true
         
         // 1. 旋转statusbar

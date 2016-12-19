@@ -14,7 +14,6 @@ class MainCustomNaViController: UINavigationController {
         super.viewDidLoad()
         
         self.isNavigationBarHidden = true
-        
     }
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
