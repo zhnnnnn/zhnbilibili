@@ -14,6 +14,7 @@
 （实在是懒癌晚期的患者我上传了一份完整代码到网盘。。。https://pan.baidu.com/s/1cMQAYi）
 
 ###截屏 gif
+<img src="https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/readme_images/IMG_0570.PNG" width = "100"  height = "140" alt="图片描述" align=center />
 ![img1](./readme_images/IMG_0569.PNG =100x140)
 ![img2](https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/readme_images/IMG_0570.PNG =100x140)
 ![img2](https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/readme_images/IMG_0571.PNG =100x140)
