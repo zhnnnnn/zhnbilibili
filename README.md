@@ -24,7 +24,7 @@ bestSwifter https://bestswifter.com/
 
 想要试试直播模块的按照http://www.jianshu.com/p/53059be61546 搭个服务器。把HomeStartLiveViewController里的stream.url修改一下
 
-（实在是懒癌晚期的患者我上传了一份完整代码到网盘。。。https://pan.baidu.com/s/1cMQAYi ）
+（我上传了一份完整代码到网盘(可能不是最新的)。。。https://pan.baidu.com/s/1cMQAYi ）
 
 ###部分截屏 gif
 
