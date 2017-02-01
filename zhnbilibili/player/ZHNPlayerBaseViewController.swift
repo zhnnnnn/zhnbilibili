@@ -448,9 +448,15 @@ extension ZHNPlayerBaseViewController {
     
     @objc func playerBackStateDidChange(notification:Notification) {
         
+<<<<<<< HEAD
     }
     
     @objc func fullScreenAction() {
+=======
+        sliderStatusTimer = nil
+        addSliderStatusTimer()
+        isfullScreen = true
+>>>>>>> origin/master
         
         isfullScreen = true
 
