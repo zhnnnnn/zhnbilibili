@@ -14,6 +14,13 @@
 （实在是懒癌晚期的患者我上传了一份完整代码到网盘。。。https://pan.baidu.com/s/1cMQAYi）
 
 ###部分截屏 gif
+
+<img src="https://github.com/zhnnnnn/zhnbilibili/blob/master/readme_images/gif1.gif" width = "200"  height = "300" alt="图片描述" align=center />
+<img src="https://github.com/zhnnnnn/zhnbilibili/blob/master/readme_images/gif2.gif" width = "200"  height = "300" alt="图片描述" align=center />
+<img src="https://github.com/zhnnnnn/zhnbilibili/blob/master/readme_images/gif3.gif" width = "200"  height = "300" alt="图片描述" align=center />
+<img src="https://github.com/zhnnnnn/zhnbilibili/blob/master/readme_images/gif4.gif" width = "200"  height = "300" alt="图片描述" align=center />
+<img src="https://github.com/zhnnnnn/zhnbilibili/blob/master/readme_images/gif5.gif" width = "200"  height = "300" alt="图片描述" align=center />
+
 <img src="https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/readme_images/IMG_0569.PNG" width = "200"  height = "300" alt="图片描述" align=center />
 <img src="https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/readme_images/IMG_0570.PNG" width = "200"  height = "300" alt="图片描述" align=center />
 <img src="https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/readme_images/IMG_0571.PNG" width = "200"  height = "300" alt="图片描述" align=center />
