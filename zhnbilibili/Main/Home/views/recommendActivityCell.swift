@@ -25,7 +25,6 @@ class recommendActivityCell: UICollectionViewCell {
         }
     }
     
-    
     // MARK: - 懒加载
     lazy var mainCollectionView: UICollectionView = {[weak self] in
         let flowLayout = UICollectionViewFlowLayout()
@@ -66,7 +65,6 @@ class recommendActivityCell: UICollectionViewCell {
 
 // MARK: - 代理方法
 extension recommendActivityCell:UICollectionViewDelegate {
-    
     
 }
 

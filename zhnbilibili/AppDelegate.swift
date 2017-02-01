@@ -9,9 +9,10 @@
 import UIKit
 import Kingfisher
 import ReachabilitySwift
+import SDWebImage
 
 enum networkType {
-    case WWAN // 2g3g
+    case WWAN // 2g3g4g
     case WIFI // wift
     case NONETWORK // 没有网络
 }
@@ -25,6 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        // 初始化控制器
+        initMainController()    
+        // 加载动画
+        splashAnimate()
         // 显示FPS
         JPFPSStatus.sharedInstance().open()
         //添加观察者观察网络状态的改变
@@ -55,6 +60,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } catch {
             print("Unable to start notifier")
         }
+    }
+    
+    fileprivate func initMainController() {
+        let keyWindow =  UIWindow(frame: UIScreen.main.bounds)
+        window = keyWindow
+        window?.makeKeyAndVisible()
+        let mainController = MainTabbarViewController()
+        window?.rootViewController = mainController
+    }
+    
+    fileprivate func splashAnimate() {
+        let backImageView = UIImageView()
+        backImageView.image = UIImage(named: "bilibili_splash_iphone_bg")
+        backImageView.contentMode = .scaleAspectFill
+        backImageView.frame = CGRect(x: 0, y: 0, width: kscreenWidth, height: kscreenHeight)
+        let splashView = UIImageView()
+        splashView.contentMode = .scaleAspectFill
+        splashView.image = UIImage(named: "bilibili_splash_default")
+        backImageView.addSubview(splashView)
+        splashView.center = CGPoint(x: backImageView.zhnCenterX, y: backImageView.zhnCenterY - 60)
+        splashView.bounds = CGRect(x: 0, y: 0, width: kscreenWidth - 50, height: kscreenWidth - 50)
+        splashView.transform = splashView.transform.scaledBy(x: 0.01, y: 0.01)
+        UIView.animate(withDuration: 0.8, animations: {
+            splashView.isHidden = false
+            splashView.transform = CGAffineTransform.identity
+        }) { (complete) in
+            DispatchQueue.afer(time: 0.5, action: {
+                backImageView.removeFromSuperview()
+            })
+        }
+        window?.addSubview(backImageView)
     }
     
     

@@ -9,16 +9,24 @@
 import UIKit
 import MediaPlayer
 
+// 当前手势的方向
 enum controlDirection {
     case left
     case right
 }
 
+// 当前手势控制的类型
 enum controlType {
     case sound
     case light
     case playTime
 }
+
+// 滑动切换播放进度的通知
+let kSwipeScreenToChangePlayTimeNotification = Notification.Name("kSwipeScreenToChangePlayTimeNotification")
+let kSwipeScrrenBeginNotification = Notification.Name("kSwipeScrrenBeginNotification")
+let kSwipeScreenEndNotification = Notification.Name("kSwipeScreenEndNotification")
+let ktransKey = "ktransKey"
 
 class ZHNplayerMenuBaseView: UIView {
 
@@ -111,7 +119,7 @@ extension ZHNplayerMenuBaseView {
         // 2. 初始化位置
         pauseNoticeLabel.snp.makeConstraints { (make) in
             make.left.right.equalTo(self)
-            make.top.equalTo(self).offset(50)
+            make.top.equalTo(self).offset(60)
             make.height.equalTo(0)
         }
         // 3. 执行动画
@@ -119,7 +127,7 @@ extension ZHNplayerMenuBaseView {
             UIView.animate(withDuration: 0.5, animations: {
                 self.pauseNoticeLabel.snp.remakeConstraints { (make) in
                     make.left.right.equalTo(self)
-                    make.top.equalTo(self).offset(50)
+                    make.top.equalTo(self).offset(60)
                     make.height.equalTo(20)
                 }
                 self.layoutIfNeeded()
@@ -130,7 +138,7 @@ extension ZHNplayerMenuBaseView {
                     UIView.animate(withDuration: 0.5, animations: {
                         self.pauseNoticeLabel.snp.remakeConstraints { (make) in
                             make.left.right.equalTo(self)
-                            make.top.equalTo(self).offset(50)
+                            make.top.equalTo(self).offset(60)
                             make.height.equalTo(0)
                         }
                         self.layoutIfNeeded()
@@ -141,6 +149,20 @@ extension ZHNplayerMenuBaseView {
             }
         }
     }
+    
+    // 添加timer
+    func addTimer(needStart: Bool) {
+        // 1.先移除之前的timer
+        removeTimer()
+        // 2.再添加timer
+        animateTimer = SwiftTimer(interval: .seconds(15)) { (timer) in
+            self.disMissAnimate()
+        }
+        if needStart {
+            animateTimer?.start()
+        }
+    }
+    
 }
 
 //======================================================================
@@ -158,21 +180,14 @@ extension ZHNplayerMenuBaseView {
             self.topContainerView.alpha = 0
             self.bottomContainerView.alpha = 0
             // 3. 隐藏statusbar
-            UIApplication.shared.isStatusBarHidden = true
+            //
+            // 我播放普通视频界面的显示细节地方用的是viewcontroller。。。这里就会有一个问题，当statubar隐藏的之前view的frame的y就是-20,这时候显示是正常的但是statubar隐藏掉之后y还是-20就会有问题会上移。。。用view的情况下应该不会有这个问题。这里懒的重新修改了。。不知道大家有没有方法让这个上移效果没有
+            //
+//            UIApplication.shared.isStatusBarHidden = true
             
         }) { (complete) in
             self.topContainerView.transform = CGAffineTransform.identity
             self.bottomContainerView.transform = CGAffineTransform.identity
-        }
-    }
-    
-    // 添加timer
-    fileprivate func addTimer(needStart: Bool) {
-        animateTimer = SwiftTimer(interval: .seconds(15)) { (timer) in
-            self.disMissAnimate()
-        }
-        if needStart {
-            animateTimer?.start()
         }
     }
     
@@ -193,7 +208,7 @@ extension ZHNplayerMenuBaseView {
             }else{
                 curretAlpha = 0
                 self?.removeTimer()
-                UIApplication.shared.isStatusBarHidden = true
+//                UIApplication.shared.isStatusBarHidden = true
             }
             // 2. 处理显示
             UIView.animate(withDuration: 0.5, animations: {
@@ -207,7 +222,7 @@ extension ZHNplayerMenuBaseView {
     // 添加拖动的手势
     fileprivate func addPanGesture() {
         let pangesture = UIPanGestureRecognizer(target: self, action: #selector(panAction(panGes:)))
-        controlsView.addGestureRecognizer(pangesture)
+        self.addGestureRecognizer(pangesture)
     }
     
     // 拿到控制音量的slider
@@ -239,6 +254,9 @@ extension ZHNplayerMenuBaseView {
                 direction = .right
             }
             
+            // 2.发送手势开始的通知
+            NotificationCenter.default.post(name: kSwipeScrrenBeginNotification, object: nil, userInfo: nil)
+            
         }else if panGes.state == UIGestureRecognizerState.changed {
             
             // 1. 判断当前控制的类型
@@ -266,15 +284,12 @@ extension ZHNplayerMenuBaseView {
                 let delta = transY / 10000
                 volumSlider?.value -= Float(delta)
             }else if controltype == .playTime {
-            
-                
-                /// todo
-                
-                
+                NotificationCenter.default.post(name: kSwipeScreenToChangePlayTimeNotification, object: nil, userInfo: [ktransKey:Float(transX)])
             }
             
         }else if panGes.state == UIGestureRecognizerState.ended || panGes.state == UIGestureRecognizerState.cancelled {
             controltype = nil
+            NotificationCenter.default.post(name: kSwipeScreenEndNotification, object: nil, userInfo: nil)
         }
     }
 }

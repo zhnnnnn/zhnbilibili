@@ -14,7 +14,7 @@ class ZHNrabbitFreshBaseViewController: UIViewController {
     fileprivate var dragging: Bool = false
     fileprivate var isinherit: Bool = true
     fileprivate var freshing: Bool = false // 是否在刷新状态
-    fileprivate let ktabbarHeight: CGFloat = 50
+    fileprivate let knavibarHeight: CGFloat = 50
     fileprivate let krabbitEarWidth: CGFloat = 35
     fileprivate let krabbitEarHeight: CGFloat = 6
     fileprivate let kfreshMinHeight: CGFloat = 50// 兔耳朵开始显示的高度
@@ -156,7 +156,7 @@ extension ZHNrabbitFreshBaseViewController {
         
         // 2.展示gifview的父控件
         view.addSubview(rabbitEarMaskView)
-        rabbitEarMaskView.frame = CGRect(x: 0, y: ktabbarHeight, width: view.zhnWidth, height: view.zhnheight)
+        rabbitEarMaskView.frame = CGRect(x: 0, y: knavibarHeight, width: view.zhnWidth, height: view.zhnheight)
         
         // 3.左耳
         rabbitEarMaskView.addSubview(leftRabbitEar)
@@ -174,7 +174,7 @@ extension ZHNrabbitFreshBaseViewController {
         
         // 6.滑动控件
         containerView.addSubview(contentScrollView!)
-        contentScrollView?.frame = CGRect(x: 0, y: ktabbarHeight, width: view.zhnWidth, height: view.zhnheight)
+        contentScrollView?.frame = CGRect(x: 0, y: knavibarHeight, width: view.zhnWidth, height: view.zhnheight)
         
         // 7.展示gif的view
         rabbitEarMaskView.addSubview(rabbitEarMaskTopView)
@@ -321,7 +321,7 @@ extension ZHNrabbitFreshBaseViewController {
             if !self.dragging {
                 UIView.animate(withDuration: 0.2, animations: {
                     
-                    self.contentScrollView?.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: self.ktabbarHeight + 50, right: 0)
+                    self.contentScrollView?.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: self.knavibarHeight + 50, right: 0)
                     self.gifImageView.center = CGPoint(x: self.rabbitEarMaskTopView.zhnCenterX, y: -40)
                     self.gifNoticeLabel.center =  CGPoint(x: self.rabbitEarMaskTopView.zhnCenterX, y: -20)
                     
@@ -364,7 +364,7 @@ extension ZHNrabbitFreshBaseViewController {
             valueTransform(trans: (-offsetY - kfreshMinHeight), rota: rota)
             
             // <2.耳朵父控件位移
-            rabbitEarMaskView.frame = CGRect(x: 0, y: ktabbarHeight+(-offsetY - kfreshMinHeight), width: view.zhnWidth, height: view.zhnheight)
+            rabbitEarMaskView.frame = CGRect(x: 0, y: knavibarHeight+(-offsetY - kfreshMinHeight), width: view.zhnWidth, height: view.zhnheight)
             
             // <3.提示label位移加透明度变化
             noticeLabel.text = "再用点力!"
@@ -378,7 +378,7 @@ extension ZHNrabbitFreshBaseViewController {
         // 4.耳朵只位移(> maxheight)
         if offsetY <= -KfreshMaxHeight {
             valueTransform(trans: (-offsetY - kfreshMinHeight), rota: CGFloat(M_PI_2))
-            rabbitEarMaskView.frame = CGRect(x: 0, y: ktabbarHeight+(-offsetY - kfreshMinHeight), width: view.zhnWidth, height: view.zhnheight)
+            rabbitEarMaskView.frame = CGRect(x: 0, y: knavibarHeight+(-offsetY - kfreshMinHeight), width: view.zhnWidth, height: view.zhnheight)
             noticeLabel.text = "松手加载"
             if self.animateTimer == nil {
                 setTimer()
@@ -428,12 +428,12 @@ extension ZHNrabbitFreshBaseViewController : UIScrollViewDelegate {
                 self.noticeLabel.alpha = 0
                 
                 // 2.
-                self.rabbitEarMaskView.frame = CGRect(x: 0, y: self.ktabbarHeight, width: self.view.zhnWidth, height:self.view.zhnheight)
+                self.rabbitEarMaskView.frame = CGRect(x: 0, y: self.knavibarHeight, width: self.view.zhnWidth, height:self.view.zhnheight)
                 self.leftRabbitEar.transform = CGAffineTransform.identity
                 self.rightRabbitEar.transform = CGAffineTransform.identity
                 
                 // 3.
-                self.contentScrollView?.contentInset = UIEdgeInsets(top: self.kfreshMinHeight, left: 0, bottom: self.ktabbarHeight+50, right: 0)
+                self.contentScrollView?.contentInset = UIEdgeInsets(top: self.kfreshMinHeight, left: 0, bottom: self.knavibarHeight+50, right: 0)
                 self.contentScrollView?.setContentOffset(CGPoint(x: 0, y: -self.kfreshMinHeight), animated: false)
                 
                 

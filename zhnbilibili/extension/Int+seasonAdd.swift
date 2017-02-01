@@ -27,7 +27,7 @@ extension Int {
         if self == 4 {
             return UIImage(named: "season_autumn_icon")!
         }
-        return UIImage(named: "")!
+        return UIImage(named: "season_autumn_icon")!
     }
     
     func seasionMoth() -> String {

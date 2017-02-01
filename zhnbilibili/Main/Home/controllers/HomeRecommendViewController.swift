@@ -54,7 +54,11 @@ class HomeRecommendViewController: ZHNrabbitFreshBaseViewController {
         // 加载数据
         loadData()
         
+        // 设置代理
         recommendVM.delegate = self
+        
+        // 监听
+        NotificationCenter.default.addObserver(self, selector: #selector(clickCarousel(notification:)), name: kcarouselViewSelectedRECOMMENDNotification, object: nil)
     }
     
     // MARK: - 重写父类的方法
@@ -129,12 +133,23 @@ extension HomeRecommendViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // banner 跳转的时候需要考虑可能是直播 bilibili://live/11
         let sectionModel = recommendVM.statusArray[indexPath.section]
-        let rowModel = sectionModel.body[indexPath.row]
-        let playerVC = ZHNnormalPlayerViewController()
-        playerVC.itemModel = rowModel
-        self.navigationController?.pushViewController(playerVC, animated: true)
+        if sectionModel.sectionType == homeStatustype.live {
+            /// 实在拿不到播放的url
+//            let liveVC = ZHNbilibiliLivePlayerViewController()
+        }else if sectionModel.sectionType == homeStatustype.bangumi {
+            let bangumiVC = ZHNbangumiDetailViewController()
+            let rowModel = sectionModel.body[indexPath.row]
+            let detaimModel = HomeBangumiDetailModel()
+            detaimModel.season_id = rowModel.param
+            bangumiVC.bangumiDetailModel = detaimModel
+            _ = navigationController?.pushViewController(bangumiVC, animated: true)
+        }else {
+            let rowModel = sectionModel.body[indexPath.row]
+            let playerVC = ZHNnormalPlayerViewController()
+            playerVC.itemModel = rowModel
+            self.navigationController?.pushViewController(playerVC, animated: true)
+        }
     }
-    
 }
 
 //======================================================================
@@ -172,6 +187,18 @@ extension HomeRecommendViewController: recommendViewModelDelegate {
         DispatchQueue.main.async {
             self.maincollectionView.reloadSections(IndexSet(integer: section))
         }
+    }
+}
+
+//======================================================================
+// MARK:- 轮播的点击
+//======================================================================
+extension HomeRecommendViewController {
+    @objc func clickCarousel(notification: Notification) {
+        let url = notification.userInfo?[kcarouselSelectedUrlKey] as! String
+        let webVC = ZHNbilibiliWebViewController()
+        webVC.urlString = url
+        _ = navigationController?.pushViewController(webVC, animated: true)
     }
 }
 

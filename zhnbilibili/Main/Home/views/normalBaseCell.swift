@@ -21,22 +21,7 @@ class normalBaseCell: UICollectionViewCell {
     // MARK: - 属性 set 方法 
     var statusModel: itemDetailModel? {
         didSet{
-            // 1.赋值图片
-            if let urlString = statusModel?.cover {
-                let url = URL(string: urlString)
-                contentImageView.sd_setImage(with: url)
-                //
-                // 用喵神的kingfisher内存会爆掉。。。。跟喵神提了issue，喵神的回复是缓存策略是会用到memory cache，只有到收到memory警告了才会做出处理，可以通过设置 ImageCache.default.maxMemoryCost 来控制处理memory cache的边界。但是我设置了还是有问题。先用sdwebimage代替了。。。。
-                //
-//                let url = URL(string: urlString)
-//                contentImageView.kf.setImage(with: url)
-            }
-            // 2.赋值标题
-            if let title = statusModel?.title {
-                // 因为cell里面的label里字是顶到最上面显示的，但是你用sizetofit是能够满足但是你设置了之后你就不能控制行数最多是两层了。。这里就用了唐巧的非常猥琐的方法在后面来加空格来显示 \(^o^)/~
-                let str = "\(title)\n\n\n"
-                titleLabel.text = str
-            }
+           intialStatus()
         }
     }
     
@@ -164,9 +149,10 @@ class normalBaseCell: UICollectionViewCell {
         }
     
         titleLabel.snp.makeConstraints { (make) in
-            make.left.bottom.equalTo(self)
+            make.left.equalTo(self)
             make.right.equalTo(reloadButton.snp.left)
             make.top.equalTo(contentImageView.snp.bottom)
+            make.height.lessThanOrEqualTo(40)
         }
     }
 }
@@ -189,6 +175,28 @@ extension normalBaseCell {
             if let method = delegate.normalBaseReloadSection{
                 method(selectedSection, sectiontype)
             }
+        }
+    }
+}
+
+// MARK -
+extension normalBaseCell {
+    func intialStatus() {
+        // 1.赋值图片
+        if let urlString = statusModel?.cover {
+            let url = URL(string: urlString)
+            contentImageView.sd_setImage(with: url)
+            //
+            // 用喵神的kingfisher内存会爆掉。。。。跟喵神提了issue，喵神的回复是缓存策略是会用到memory cache，只有到收到memory警告了才会做出处理，可以通过设置 ImageCache.default.maxMemoryCost 来控制处理memory cache的边界。但是我设置了还是有问题。先用sdwebimage代替了。。。。
+            //
+            //                let url = URL(string: urlString)
+            //                contentImageView.kf.setImage(with: url)
+        }
+        // 2.赋值标题
+        if let title = statusModel?.title {
+            // 因为cell里面的label里字是顶到最上面显示的，但是你用sizetofit是能够满足但是你设置了之后你就不能控制行数最多是两层了。。这里就用了唐巧的非常猥琐的方法在后面来加空格来显示 \(^o^)/~
+            let str = "\(title)\n\n\n"
+            titleLabel.text = str
         }
     }
 }

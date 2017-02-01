@@ -10,7 +10,9 @@ import UIKit
 
 class ZHNnormalFullScreenBottom: UIView {
 
-    
+    // 返回的action
+    var backAction: (()->Void)?
+    // MARK - 懒加载控件
     lazy var fullTimeLabel: UILabel = {
         let fullTimeLabel = UILabel()
         fullTimeLabel.textColor = UIColor.white
@@ -48,7 +50,7 @@ class ZHNnormalFullScreenBottom: UIView {
         self.addSubview(currentTimeLabel)
         self.addSubview(seekedTimeProgress)
         self.addSubview(seekTimeSlider)
-        self.backgroundColor = UIColor.ZHNcolor(red: 0, green: 0, blue: 0, alpha: 0.3)
+        self.backgroundColor = UIColor.ZHNcolor(red: 0, green: 0, blue: 0, alpha: 0.7)
     }
     
     override func layoutSubviews() {
@@ -64,7 +66,8 @@ class ZHNnormalFullScreenBottom: UIView {
         seekTimeSlider.snp.makeConstraints { (make) in
             make.left.equalTo(currentTimeLabel.snp.right).offset(15)
             make.right.equalTo(fullTimeLabel.snp.left).offset(-15)
-            make.centerY.equalTo(gaoqinButton).offset(3)
+            make.centerY.equalTo(gaoqinButton).offset(13)
+            make.height.equalTo(50)
         }
         seekedTimeProgress.snp.makeConstraints { (make) in
             make.left.equalTo(currentTimeLabel.snp.right).offset(15)
@@ -75,9 +78,12 @@ class ZHNnormalFullScreenBottom: UIView {
     
     
     @IBAction func resignFullScreenAction(_ sender: AnyObject) {
+        guard let action = backAction else {return}
+        action()
     }
     
     @IBAction func danmuAction(_ sender: AnyObject) {
+        
     }
     
     class func instanceView() -> ZHNnormalFullScreenBottom{

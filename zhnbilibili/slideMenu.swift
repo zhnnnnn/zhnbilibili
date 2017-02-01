@@ -401,11 +401,15 @@ extension slideMenu{
                  tempRect = leftRect
              }
             
+            if index == (titleArray?.count)! - 2 {
+                tempRect = rightRect
+            }
+            
              // 停止滑动的时候没有达到要换行的情况(回到未换行的状态)
              if showingIndex == index && percent == 0 {
                  tempRect = leftRect
              }
-            
+
              // 赋值新的位置
              let x = tempRect.origin.x
              let y = tempRect.maxY + ksliderVPadding

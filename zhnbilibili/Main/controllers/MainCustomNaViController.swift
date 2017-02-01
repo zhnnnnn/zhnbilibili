@@ -9,12 +9,10 @@
 import UIKit
 
 class MainCustomNaViController: UINavigationController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.isNavigationBarHidden = true
-        
     }
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {

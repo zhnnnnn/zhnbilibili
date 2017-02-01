@@ -59,6 +59,13 @@ class HomeViewController: UIViewController {
         
         // 默认选中中间的推荐
         self.contentScrollView.contentOffset = CGPoint(x: kscreenWidth, y: 0)
+        
+        // 监听通知
+        NotificationCenter.default.addObserver(self, selector: #selector(showLive), name: khomeViewControllerShowLIVEnotification, object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 }
 
@@ -96,6 +103,16 @@ extension HomeViewController {
         contentScrollView.addSubview(serialVC.view)
         serialVC.view.frame = CGRect(x: view.zhnWidth*2, y: 0, width: view.zhnWidth, height: view.zhnheight)
     }
-    
-    
 }
+
+//======================================================================
+// MARK:- notification
+//======================================================================
+extension HomeViewController {
+    @objc func showLive() {
+        DispatchQueue.main.async {
+          self.contentScrollView.scrollRectToVisible(CGRect(x: 0, y: 0, width: kscreenWidth, height: 100), animated: false)
+        }
+    }
+}
+

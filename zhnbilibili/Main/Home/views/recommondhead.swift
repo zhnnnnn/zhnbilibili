@@ -28,6 +28,11 @@ class recommondhead: UICollectionReusableView {
                 imageAry.append(bannerItem.image!)
             }
             carouselView.intnetImageArray = imageAry
+            carouselView.selectedAction = { [weak self] (_ index: Int) in
+                let bannerMdel = self?.statusModel?.banner?.top?[index]
+                guard let bannerURL = bannerMdel?.uri else {return}
+                ZHNnotificationHelper.recommedcarouselClickNotification(link: bannerURL)
+            }
         }
     }
     

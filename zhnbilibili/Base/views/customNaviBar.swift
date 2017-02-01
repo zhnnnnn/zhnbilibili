@@ -37,16 +37,15 @@ class customNaviBar: UIView {
 
     lazy var titleLabel: UILabel = {
         let titleLabel = UILabel()
-        titleLabel.text = "标题测试测试从生产上传谁抄谁测试"
+        titleLabel.text = "标题需要自定义~"
         titleLabel.textColor = UIColor.white
         titleLabel.font = UIFont.systemFont(ofSize: 16)
+        titleLabel.textAlignment = .center
         return titleLabel
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        
         self.addSubview(backArrowButton)
         self.addSubview(titleLabel)
         self.backgroundColor = knavibarcolor

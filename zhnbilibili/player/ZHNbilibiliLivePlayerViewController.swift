@@ -38,9 +38,6 @@ class ZHNbilibiliLivePlayerViewController: ZHNPlayerBaseViewController {
         // 加载player
         loadPlayer()
     }
-    
-    
-    
 }
 
 

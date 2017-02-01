@@ -42,6 +42,7 @@ class HomeLiveShowViewController: ZHNrabbitFreshBaseViewController {
         startLivIngButton.imageView?.contentMode = .center
         startLivIngButton.setImage(UIImage(named: "goLive"), for: .normal)
         startLivIngButton.setImage(UIImage(named: "goLive"), for: .highlighted)
+        startLivIngButton.addTarget(self, action: #selector(startLive), for: .touchUpInside)
         return startLivIngButton
     }()
     
@@ -93,12 +94,25 @@ extension HomeLiveShowViewController {
     }
 }
 
+//======================================================================
+// MARK:- HomeLiveViewModelDelegate
+//======================================================================
 extension HomeLiveShowViewController: HomeLiveViewModelDelegate{
     
     func HomeLiveViewModelReloadSetion(section: Int) {
         DispatchQueue.main.async {
             self.maincollectionView.reloadSections(IndexSet(integer: section))
         }
+    }
+}
+
+//======================================================================
+// MARK:- target action
+//======================================================================
+extension HomeLiveShowViewController {
+    func startLive()  {
+        let startLiveVC = HomeStartLiveViewController()
+        _ = navigationController?.pushViewController(startLiveVC, animated: true)
     }
 }
 

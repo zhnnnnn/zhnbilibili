@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ZHNelecView" customModule="zhnbilibili" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="424" height="197"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZM-Xi-VwX">
+                    <rect key="frame" x="20" y="20" width="384" height="157"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fk1-q8-aZH">
+                            <rect key="frame" x="0.0" y="78" width="384" height="78.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoh-xN-2YY">
+                                    <rect key="frame" x="299" y="24.5" width="70" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="70" id="FIa-QD-I4h"/>
+                                        <constraint firstAttribute="height" constant="30" id="HeP-e4-gVs"/>
+                                    </constraints>
+                                    <state key="normal" title="充电榜单">
+                                        <color key="titleColor" red="0.98823529409999999" green="0.51764705879999995" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="zhn_cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="zhn_boderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="zhn_boderColor">
+                                            <color key="value" red="0.98823529409999999" green="0.51764705879999995" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="uoh-xN-2YY" firstAttribute="centerY" secondItem="fk1-q8-aZH" secondAttribute="centerY" id="5Jq-rt-Tic"/>
+                                <constraint firstAttribute="trailing" secondItem="uoh-xN-2YY" secondAttribute="trailing" constant="15" id="LkY-S5-pZH"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ptp-YZ-NTd">
+                            <rect key="frame" x="0.0" y="0.0" width="384" height="78.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请赐予我电量吧" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beN-dW-8pU">
+                                    <rect key="frame" x="118.5" y="31" width="107.5" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" red="0.98823529409999999" green="0.51764705879999995" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="re3-Bk-fZm">
+                                    <rect key="frame" x="299" y="25" width="70" height="30"/>
+                                    <color key="backgroundColor" red="0.98823529409999999" green="0.51764705879999995" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="70" id="PR1-gm-nlJ"/>
+                                        <constraint firstAttribute="height" constant="30" id="zM9-82-AKJ"/>
+                                    </constraints>
+                                    <state key="normal" title="充电">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="zhn_cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WUU-VR-d1c">
+                                    <rect key="frame" x="0.0" y="77.5" width="384" height="1"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="NvO-FR-z0G" customClass="hairLineConstraint" customModule="zhnbilibili" customModuleProvider="target"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="re3-Bk-fZm" secondAttribute="trailing" constant="15" id="3cJ-1s-XNN"/>
+                                <constraint firstItem="re3-Bk-fZm" firstAttribute="centerY" secondItem="beN-dW-8pU" secondAttribute="centerY" id="6Xi-6Q-dPi"/>
+                                <constraint firstAttribute="trailing" secondItem="WUU-VR-d1c" secondAttribute="trailing" id="FYl-jn-Io7"/>
+                                <constraint firstAttribute="bottom" secondItem="WUU-VR-d1c" secondAttribute="bottom" id="QbM-hO-jL1"/>
+                                <constraint firstItem="beN-dW-8pU" firstAttribute="centerX" secondItem="Ptp-YZ-NTd" secondAttribute="centerX" constant="-20" id="RuR-an-OJg"/>
+                                <constraint firstItem="WUU-VR-d1c" firstAttribute="leading" secondItem="Ptp-YZ-NTd" secondAttribute="leading" id="i5R-pi-L7q"/>
+                                <constraint firstItem="beN-dW-8pU" firstAttribute="centerY" secondItem="Ptp-YZ-NTd" secondAttribute="centerY" id="s7L-xo-Cfh"/>
+                            </constraints>
+                        </view>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="misc_battery_power_bg" translatesAutoresizingMaskIntoConstraints="NO" id="CA6-U4-BdS">
+                            <rect key="frame" x="30" y="-20" width="50" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="25T-B1-eMJ"/>
+                                <constraint firstAttribute="width" constant="50" id="qxL-x3-Mbk"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.52485146240000002" green="1" blue="0.35049597069999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="fk1-q8-aZH" firstAttribute="leading" secondItem="LZM-Xi-VwX" secondAttribute="leading" id="5wQ-aZ-Cn8"/>
+                        <constraint firstItem="fk1-q8-aZH" firstAttribute="top" secondItem="Ptp-YZ-NTd" secondAttribute="bottom" id="9QQ-Hs-cqQ"/>
+                        <constraint firstItem="fk1-q8-aZH" firstAttribute="height" secondItem="LZM-Xi-VwX" secondAttribute="height" multiplier="0.5" id="EZx-h4-sHk"/>
+                        <constraint firstItem="CA6-U4-BdS" firstAttribute="top" secondItem="LZM-Xi-VwX" secondAttribute="top" constant="-20" id="GUx-w7-qh9"/>
+                        <constraint firstItem="CA6-U4-BdS" firstAttribute="leading" secondItem="LZM-Xi-VwX" secondAttribute="leading" constant="30" id="LeL-qw-uWI"/>
+                        <constraint firstAttribute="trailing" secondItem="Ptp-YZ-NTd" secondAttribute="trailing" id="R1b-om-y4r"/>
+                        <constraint firstAttribute="trailing" secondItem="fk1-q8-aZH" secondAttribute="trailing" id="Uh5-yq-nUD"/>
+                        <constraint firstAttribute="bottom" secondItem="fk1-q8-aZH" secondAttribute="bottom" id="V1H-8H-QTR"/>
+                        <constraint firstItem="Ptp-YZ-NTd" firstAttribute="leading" secondItem="LZM-Xi-VwX" secondAttribute="leading" id="aAY-uB-DJu"/>
+                        <constraint firstItem="Ptp-YZ-NTd" firstAttribute="top" secondItem="LZM-Xi-VwX" secondAttribute="top" id="cVe-cT-CwE"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="zhn_cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="zhn_boderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="zhn_boderColor">
+                            <color key="value" red="0.98823529409999999" green="0.51764705879999995" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="LZM-Xi-VwX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="MBJ-SD-YLx"/>
+                <constraint firstAttribute="bottom" secondItem="LZM-Xi-VwX" secondAttribute="bottom" constant="20" id="ZTw-ga-Z4r"/>
+                <constraint firstItem="LZM-Xi-VwX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="ZVL-Dg-pPU"/>
+                <constraint firstAttribute="trailing" secondItem="LZM-Xi-VwX" secondAttribute="trailing" constant="20" id="hZ6-2i-cgb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="zhn_cornerRadius">
+                    <real key="value" value="0.0"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="zhn_boderWidth">
+                    <real key="value" value="0.0"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="bottomContainerView" destination="fk1-q8-aZH" id="PoH-U1-Pp8"/>
+            </connections>
+            <point key="canvasLocation" x="353" y="-215"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="misc_battery_power_bg" width="258" height="346"/>
+    </resources>
+</document>

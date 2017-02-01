@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import IJKMediaFramework
 
 class ZHNdanmuView: UIView {
 
-    // 快进快退的时间
-    var predictedTime: TimeInterval = 0
-    // 初始化弹幕的时间
-    var startDate: Date?
+    // 是否是全屏播放的状态(bilibili的弹幕是可以在全屏非全屏的切换当中改变字体大小的，但是这个库实现不了那种效果，它是预先缓存了数据了的。。。。。需要自己写个弹幕组件来满足这种效果)
+    var isfullScreen: Bool = false
+    // 当前的播放器
+    var player: IJKFFMoviePlayerController?
     // 弹幕的数据
     var danmuModelArray: [danmuModel]? {
         didSet{
@@ -56,8 +57,12 @@ class ZHNdanmuView: UIView {
 //======================================================================
 extension ZHNdanmuView {
     func startRender() {
-        startDate = Date()
+//        startDate = Date()
         renderer.start()
+    }
+    
+    func endRender() {
+        renderer.stop()
     }
 }
 
@@ -67,7 +72,7 @@ extension ZHNdanmuView {
 extension ZHNdanmuView {
     fileprivate func walkTextScriptDes(model: danmuModel){
         let descriptor = BarrageDescriptor()
-        let speed: NSNumber = 100
+        let speed = NSNumber(value: model.danmuText.characters.count * 2 + 100)
         let direction: NSNumber = 1
         let delay = model.danmuShowingTime
         if model.danmuShowIngType == 1 {// 普通弹幕
@@ -89,7 +94,7 @@ extension ZHNdanmuView {
         let textColor = UIColor.ColorHex(hex: hexColorString)
         descriptor.params["text"] = model.danmuText
         descriptor.params["textColor"] = textColor
-        descriptor.params["shadowColor"] = UIColor.darkGray
+        descriptor.params["shadowColor"] = UIColor.black
         descriptor.params["direction"] = direction;
         renderer.receive(descriptor)
     }
@@ -100,9 +105,8 @@ extension ZHNdanmuView {
 //======================================================================
 extension ZHNdanmuView: BarrageRendererDelegate {
     func time(for renderer: BarrageRenderer!) -> TimeInterval {
-        guard let startDate = startDate else {return 0}
-        var interval = Date().timeIntervalSince(startDate)
-        interval += predictedTime
-        return interval
+        let optionCurrentTime = player != nil ? player?.currentPlaybackTime : 0
+        let currentTime = optionCurrentTime != nil ? optionCurrentTime : 0
+        return currentTime!
     }
 }

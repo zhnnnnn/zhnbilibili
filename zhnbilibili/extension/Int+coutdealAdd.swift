@@ -24,4 +24,28 @@ extension Int {
         }
     }
     
+    func CHNweekDay() -> String {
+        if self == 1 {
+            return "一"
+        }
+        if self == 2 {
+            return "二"
+        }
+        if self == 3 {
+            return "三"
+        }
+        if self == 4 {
+            return "四"
+        }
+        if self == 5 {
+            return "五"
+        }
+        if self == 6 {
+            return "六"
+        }
+        if self == 7 {
+            return "日"
+        }
+        return ""
+    }
 }

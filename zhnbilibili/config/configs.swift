@@ -34,9 +34,12 @@ let celldetailLabelsFont = UIFont.systemFont(ofSize: 11)
 // navibar的颜色
 let knavibarcolor = UIColor.ZHNcolor(red: 252, green: 132, blue: 164, alpha: 1)
 let kmainColor = UIColor.ZHNcolor(red: 252, green: 132, blue: 164, alpha: 1)
+let ktableCellLineColor = UIColor.ZHNcolor(red: 188, green: 187, blue: 193, alpha: 1)
 // 首页的head的右边的标题的颜色
 let khomeHeadrightLabeltextColor = UIColor.ZHNcolor(red: 163, green: 163, blue: 163, alpha: 1)
 // 首页排行榜文字颜色
 let knormalHeartextLabelHotColor = UIColor.ZHNcolor(red: 254, green: 192, blue: 50, alpha: 1)
 // 首页背景颜色
 let kHomeBackColor = UIColor.ZHNcolor(red: 244, green: 244, blue: 244, alpha: 1)
+// 分割线的颜色
+let kcellLineColor = UIColor.ZHNcolor(red: 225, green: 225, blue: 225, alpha: 1)

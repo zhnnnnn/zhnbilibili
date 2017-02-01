@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IJKMediaFramework
 
 @objc protocol ZHNlivePlayMenuNormalViewDelegate {
     @objc optional func popViewControllerAction()
@@ -82,6 +83,7 @@ class ZHNlivePlayNoramlMenuView: ZHNplayerMenuBaseView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        // 1.添加控件
         topContainerView.addSubview(liveTopBackImageView)
         bottomContainerView.addSubview(liveBottomBackImageView)
         bottomContainerView.addSubview(bigPauseButton)
@@ -89,6 +91,8 @@ class ZHNlivePlayNoramlMenuView: ZHNplayerMenuBaseView {
         liveTopBackImageView.addSubview(shareButton)
         liveBottomBackImageView.addSubview(smallPauseButton)
         liveBottomBackImageView.addSubview(fullScreenButton)
+        // 2.添加通知
+        NotificationCenter.default.addObserver(self, selector: #selector(playerBackStateDidChange(notification:)), name: NSNotification.Name.IJKMPMoviePlayerPlaybackStateDidChange, object: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -135,6 +139,9 @@ class ZHNlivePlayNoramlMenuView: ZHNplayerMenuBaseView {
         }
     }
 
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 }
 
 //======================================================================
@@ -159,25 +166,33 @@ extension ZHNlivePlayNoramlMenuView {
         guard let method = delegate.pauseAction else {return}
         method(isPlaying)
         if isPlaying {
-            bigPauseButton.setImage(UIImage(named: "player_start_iphone_window"), for: .normal)
-            bigPauseButton.setImage(UIImage(named: "player_start_iphone_window"), for: .highlighted)
-            smallPauseButton.setImage(UIImage(named: "player_play_bottom_window"), for: .normal)
-            smallPauseButton.setImage(UIImage(named: "player_play_bottom_window"), for: .highlighted)
             noticePauseState(pause: true)
         }else{
-            bigPauseButton.setImage(UIImage(named: "player_pause_iphone_window"), for: .normal)
-            bigPauseButton.setImage(UIImage(named: "player_pause_iphone_window"), for: .highlighted)
-            smallPauseButton.setImage(UIImage(named: "player_pause_bottom_window"), for: .normal)
-            smallPauseButton.setImage(UIImage(named: "player_pause_bottom_window"), for: .highlighted)
             noticePauseState(pause: false)
         }
-        isPlaying = !isPlaying
     }
     
     @objc func shareAction() {
         guard let delegate = delegate else {return}
         guard let method = delegate.shareAction else {return}
         method()
+    }
+    
+    @objc func playerBackStateDidChange(notification:Notification) {
+        guard let mpPlayer = notification.object as? IJKFFMoviePlayerController else {return}
+         if mpPlayer.playbackState == .playing {
+            bigPauseButton.setImage(UIImage(named: "player_pause_iphone_window"), for: .normal)
+            bigPauseButton.setImage(UIImage(named: "player_pause_iphone_window"), for: .highlighted)
+            smallPauseButton.setImage(UIImage(named: "player_pause_bottom_window"), for: .normal)
+            smallPauseButton.setImage(UIImage(named: "player_pause_bottom_window"), for: .highlighted)
+            isPlaying = true
+         }else if mpPlayer.playbackState == .paused {
+            bigPauseButton.setImage(UIImage(named: "player_start_iphone_window"), for: .normal)
+            bigPauseButton.setImage(UIImage(named: "player_start_iphone_window"), for: .highlighted)
+            smallPauseButton.setImage(UIImage(named: "player_play_bottom_window"), for: .normal)
+            smallPauseButton.setImage(UIImage(named: "player_play_bottom_window"), for: .highlighted)
+            isPlaying = false
+         }
     }
 }
 

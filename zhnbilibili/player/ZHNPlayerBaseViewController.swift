@@ -18,7 +18,6 @@ let knormalscreenActionNotification = Notification.Name("knormalscreenActionNoti
 let knormalPlayerHeight: CGFloat = 200
 
 class ZHNPlayerBaseViewController: UIViewController {
-
     
     var currentTypeWindowMenuView: ZHNplayerMenuBaseView?
     var currentTypeFullscreenMenuView: ZHNplayerMenuBaseView?
@@ -42,6 +41,12 @@ class ZHNPlayerBaseViewController: UIViewController {
         }
     }
     
+    var titleString: String? {
+        didSet{
+            normalPlayerWindowMenuView.titleLabel.text = titleString!
+            normalPlayerFullScreenMenuView.topMenu.titleLabel.text = titleString!
+        }
+    }
     // MARK: - 所有的action的封装
     // 1. 视频加载时候的menu的action
     var loadingActionModel: ZHNplayerUrlLoadingBackViewActionModel = ZHNplayerUrlLoadingBackViewActionModel()
@@ -49,6 +54,8 @@ class ZHNPlayerBaseViewController: UIViewController {
     var liveplayNormalActionModel: ZHNplayNormalMenuViewActionModel = ZHNplayNormalMenuViewActionModel()
     // 3. 直播的视频播放的全屏时候的action
     var liveplayFullScreenActionModel: ZHNplayFullScreenMenuViewActionModel = ZHNplayFullScreenMenuViewActionModel()
+    // 4. 播放正常情况下的视频的全屏时候的action
+    var normalPlayerFullScreenActionModel: ZHNnormalPlayerFullScreenActionModel = ZHNnormalPlayerFullScreenActionModel()
     
     // MARK: - 懒加载控件
     lazy var liveContainerView: UIView = {
@@ -94,6 +101,9 @@ class ZHNPlayerBaseViewController: UIViewController {
     
     lazy var normalPlayerWindowMenuView: ZHNnormalPlayWindowMenuVIew = {
         let normalPlayerWindowMenuView = ZHNnormalPlayWindowMenuVIew()
+        normalPlayerWindowMenuView.restartTimerAction = { [weak self] in
+            self?.addSliderStatusTimer()
+        }
         normalPlayerWindowMenuView.seekTimeSlider.addTarget(self, action: #selector(sliderTouchUpInside(slider:)), for: .touchUpInside)
         normalPlayerWindowMenuView.seekTimeSlider.addTarget(self, action: #selector(sliderTouchDown(slider:)), for: .touchDown)
         normalPlayerWindowMenuView.seekTimeSlider.addTarget(self, action: #selector(sliderValudeChanged(slider:)), for: .valueChanged)
@@ -153,15 +163,19 @@ class ZHNPlayerBaseViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         UIApplication.shared.isStatusBarHidden = false
-        player?.shutdown()
+//        player?.shutdown()
+        player?.pause()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        player?.play()
     }
     
     deinit {
         println("player ---------------------------------------- 被销毁了")
+        player?.shutdown()
+        NotificationCenter.default.removeObserver(self)
     }
     
     override var shouldAutorotate: Bool {
@@ -245,9 +259,11 @@ extension ZHNPlayerBaseViewController {
         // 3. 监听是否准备开始播放了
         NotificationCenter.default.addObserver(self, selector: #selector(firstLoadSuccess(notification:)), name: NSNotification.Name.IJKMPMediaPlaybackIsPreparedToPlayDidChange, object: nil)
 
-        // // 4. 监听app进入后台，（暂停播放）
+        // 4. 监听app进入后台，（暂停播放）
         NotificationCenter.default.addObserver(self, selector: #selector(appDidEnterBackGround), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
-        
+       
+        // 5. 监听播放的状态
+        NotificationCenter.default.addObserver(self, selector: #selector(playerBackStateDidChange(notification:)), name: NSNotification.Name.IJKMPMoviePlayerPlaybackStateDidChange, object: nil)
     }
     
     fileprivate func installActionModels() {
@@ -261,6 +277,9 @@ extension ZHNPlayerBaseViewController {
         // 3
         liveplayFullScreenActionModel.currentViewController = self
         livePlayFullScreenMenuView.delegate = liveplayFullScreenActionModel
+        // 4.
+        normalPlayerFullScreenActionModel.currentViewController = self
+        normalPlayerFullScreenMenuView.delegate = normalPlayerFullScreenActionModel
     }
     
     fileprivate func initMenuType() {
@@ -310,6 +329,7 @@ extension ZHNPlayerBaseViewController {
     
     func resignFullScreen() {
         
+        addSliderStatusTimer()
         isfullScreen = false
         // 1. 旋转statusbar
         UIApplication.shared.statusBarOrientation = UIInterfaceOrientation.portrait
@@ -355,8 +375,7 @@ extension ZHNPlayerBaseViewController {
 //======================================================================
 extension ZHNPlayerBaseViewController {
     
-    
-    @objc fileprivate func firstLoadSuccess(notification:Notification) {
+    @objc func firstLoadSuccess(notification:Notification) {
         
         // 1. 视频信息的加载
         if let currentPlaybacktimer = player?.currentPlaybackTime {
@@ -396,9 +415,10 @@ extension ZHNPlayerBaseViewController {
             playLoadingMenuView.isHidden = true
         }
         windowRoteImage = nil
+        addSliderStatusTimer()
     }
     
-    @objc fileprivate func loadStatedChanged(notification:Notification) {
+    @objc func loadStatedChanged(notification:Notification) {
         guard let mpPlayer = notification.object as? IJKFFMoviePlayerController else {return}
         let loadState = mpPlayer.loadState
         
@@ -426,10 +446,14 @@ extension ZHNPlayerBaseViewController {
         }
     }
     
-    @objc fileprivate func fullScreenAction() {
+    @objc func playerBackStateDidChange(notification:Notification) {
+        
+    }
+    
+    @objc func fullScreenAction() {
         
         isfullScreen = true
-        
+
         // 1. 旋转statusbar
         UIApplication.shared.statusBarOrientation = UIInterfaceOrientation.landscapeRight
         // 2. 一个遮罩为了显示的效果更好
@@ -470,11 +494,14 @@ extension ZHNPlayerBaseViewController {
                 // <5. 切换menu
                 self.currentTypeFullscreenMenuView?.isHidden = false
                 self.currentTypeWindowMenuView?.isHidden = true
+                // <6. 添加timer
+                self.addSliderStatusTimer()
+                self.currentTypeFullscreenMenuView?.addTimer(needStart: true)
             })
         }
     }
     
-    @objc fileprivate func appDidEnterBackGround() {
+    @objc func appDidEnterBackGround() {
         normalPlayerWindowMenuView.pauseAction()
         livePlayNormalMenu.pauseAction()
     }
@@ -509,7 +536,6 @@ extension ZHNPlayerBaseViewController {
     @objc fileprivate func sliderTouchDown(slider: UISlider) {
         sliderStatusTimer = nil
     }
-    
 }
 
 

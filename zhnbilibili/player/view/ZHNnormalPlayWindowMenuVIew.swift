@@ -10,7 +10,8 @@ import UIKit
 
 class ZHNnormalPlayWindowMenuVIew: ZHNlivePlayNoramlMenuView {
     
-    
+    // 重新启动一个timer（因为block里面如果view是hidden的情况下是不捕获的）
+    var restartTimerAction: (()->Void)?
     // MARK: - 懒加载控件
     lazy var titleLabel: UILabel = {
         let titleLabel = UILabel()
@@ -78,8 +79,8 @@ class ZHNnormalPlayWindowMenuVIew: ZHNlivePlayNoramlMenuView {
         // 2.加载位置
         titleLabel.snp.makeConstraints { (make) in
             make.centerY.equalTo(backButton)
-            make.left.equalTo(backButton.snp.right).offset(10)
-            make.right.equalTo(shareButton.snp.left).offset(-10)
+            make.centerX.equalTo(self)
+            make.width.equalTo(250)
             make.height.equalTo(30)
         }
         
@@ -92,8 +93,8 @@ class ZHNnormalPlayWindowMenuVIew: ZHNlivePlayNoramlMenuView {
         seekTimeSlider.snp.makeConstraints { (make) in
             make.left.equalTo(self).offset(90)
             make.right.equalTo(self).offset(-115)
-            make.centerY.equalTo(fullScreenButton)
-            make.height.equalTo(2)
+            make.centerY.equalTo(fullScreenButton).offset(12)
+            make.height.equalTo(50)
         }
         
         currentTimeLabel.snp.makeConstraints { (make) in
@@ -122,8 +123,12 @@ extension ZHNnormalPlayWindowMenuVIew {
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if self.isPlaying && self.topContainerView.alpha == 0 {
             currentMarkProgressView.isHidden = false
+            guard let action = restartTimerAction else {return}
+            action()
         }else {
             currentMarkProgressView.isHidden = true
+            guard let action = restartTimerAction else {return}
+            action()
         }
     }
 }

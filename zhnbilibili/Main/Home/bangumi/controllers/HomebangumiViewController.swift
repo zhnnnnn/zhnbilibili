@@ -114,9 +114,20 @@ extension HomebangumiViewController: UICollectionViewDataSource {
 extension HomebangumiViewController: UICollectionViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let bangumiVC = ZHNbangumiDetailViewController()
+        let model = bangumiVM.statusArray[indexPath.section]
+        let modelArray = model as! Array<Any>
+        let detailModel = modelArray[indexPath.row]
+        if detailModel is HomeBangumiDetailModel {
+            bangumiVC.bangumiDetailModel = (detailModel as! HomeBangumiDetailModel)
+            _ = navigationController?.pushViewController(bangumiVC, animated: true)
+        }else {
+            let recommdendModel = detailModel as! HomeBangumiRecommendModel
+            let bangumiWebVC = ZHNbilibiliWebViewController()
+            bangumiWebVC.urlString = recommdendModel.link
+            _ = navigationController?.pushViewController(bangumiWebVC, animated: true)
+        }
     }
-    
 }
 
 //======================================================================
@@ -133,7 +144,6 @@ extension HomebangumiViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return bangumiVM.caluateItemSize(indexPath: indexPath)
     }
-    
     
     // 3.header的size
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {

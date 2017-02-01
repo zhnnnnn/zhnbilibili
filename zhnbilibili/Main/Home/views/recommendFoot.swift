@@ -78,6 +78,11 @@ class recommendFoot: UICollectionReusableView {
                 imageAry.append(bannerItem.image!)
             }
             carouselView.intnetImageArray = imageAry
+            carouselView.selectedAction = {(_ index: Int) in
+                let bannerMdel = banner[index]
+                guard let bannerURL = bannerMdel.uri else {return}
+                ZHNnotificationHelper.recommedcarouselClickNotification(link: bannerURL)
+            }
         }
     }
     

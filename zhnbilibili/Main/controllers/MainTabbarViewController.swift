@@ -21,20 +21,20 @@ class MainTabbarViewController: UITabBarController,UITabBarControllerDelegate {
         var controllers = [UIViewController]()
         
         // 1.
-        let test1 = MainCustomNaViController(rootViewController: HomeViewController())
-        controllers.append(test1)
+        let item1 = MainCustomNaViController(rootViewController: HomeViewController())
+        controllers.append(item1)
         // 2.
-        let test2 = MainCustomNaViController(rootViewController: HomeViewController())
-        controllers.append(test2)
+        let item2 = MainCustomNaViController(rootViewController: ZHNzoneViewController())
+        controllers.append(item2)
         // 3
-        let test3 = MainCustomNaViController(rootViewController: HomeViewController())
-        controllers.append(test3)
+        let item3 = MainCustomNaViController(rootViewController: ZHNbilibiliFocuseViewController())
+        controllers.append(item3)
         // 4
-        let test4 = MainCustomNaViController(rootViewController: HomeViewController())
-        controllers.append(test4)
+        let item4 = MainCustomNaViController(rootViewController: ZHNbilibiliFindViewController())
+        controllers.append(item4)
         // 5
-        let test5 = MainCustomNaViController(rootViewController: HomeViewController())
-        controllers.append(test5)
+        let item5 = MainCustomNaViController(rootViewController: ZHNbilibiliMineViewController())
+        controllers.append(item5)
         
         return controllers
     }()

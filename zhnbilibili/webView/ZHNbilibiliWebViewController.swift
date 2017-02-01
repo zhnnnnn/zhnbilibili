@@ -55,7 +55,7 @@ extension ZHNbilibiliWebViewController {
         
         contentWebView.snp.makeConstraints { (make) in
             make.left.right.bottom.equalTo(view)
-            make.top.equalTo(view).offset(64)
+            make.top.equalTo(view).offset(44)
         }
         
         navibar.titleLabel.text = urlString

@@ -18,7 +18,12 @@ class playCustomSlider: UISlider {
     
     // 滑块的触摸范围
     override func thumbRect(forBounds bounds: CGRect, trackRect rect: CGRect, value: Float) -> CGRect {
-        let newBounds = CGRect(x: rect.origin.x, y: rect.origin.y, width: 100, height: 100)
-        return super.thumbRect(forBounds: newBounds, trackRect: rect, value: value)
+        let widthHeight: CGFloat = 50
+        let oldRect = super.thumbRect(forBounds: bounds, trackRect: rect, value: value)
+        let thumbCenter = CGPoint(x: oldRect.origin.x + (oldRect.width)/2, y: oldRect.origin.y + (oldRect.height)/2)
+        let newRect = CGRect(x: thumbCenter.x - widthHeight/2, y: thumbCenter.y - widthHeight/2, width: widthHeight, height: widthHeight)
+        return newRect
     }
+    
+
 }

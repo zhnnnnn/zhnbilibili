@@ -40,5 +40,18 @@ extension UIImageView {
         return gifImage
     }
     
+    class func createFreshingGif() -> UIImageView {
+        let gifImage = UIImageView()
+        var gifImageArray = [UIImage]()
+        for i in 1...4 {
+            let image = UIImage(named: "refresh_logo_\(i)")
+            gifImageArray.append(image!)
+        }
+        gifImage.contentMode = UIViewContentMode.center
+        gifImage.animationImages = gifImageArray
+        gifImage.animationDuration = 0.3
+        gifImage.animationRepeatCount = 0
+        return gifImage
+    }
     
 }

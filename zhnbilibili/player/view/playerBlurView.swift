@@ -58,7 +58,7 @@ class playerBlurView: UIView {
             self.backImageView.setHeight(H: knavibarheight + (knormalPlayerHeight - knavibarheight)*percent)
             self.blurMaskView.setHeight(H: self.backImageView.zhnheight)
                 // <3. 标题
-            self.titleLabel.center = CGPoint(x: (1-percent)*40 + kscreenWidth/2, y: 42)
+            self.titleLabel.center = CGPoint(x: (1-percent)*50 + kscreenWidth/2, y: 42)
             /// 2.标题透明度的改变
             if percent > 0.4 && percent <= 1 {
                 self.titleLabel.alpha = (percent - 0.4)/0.6
@@ -81,11 +81,12 @@ class playerBlurView: UIView {
         backButton.addTarget(self, action: #selector(popViewAction), for: .touchUpInside)
         return backButton
     }()
-    fileprivate lazy var titleLabel: UILabel = {
+    lazy var titleLabel: UILabel = {
         let titleLabel = UILabel()
         titleLabel.textColor = UIColor.white
         titleLabel.font = UIFont.systemFont(ofSize: 13)
         titleLabel.text = "(null)"
+        titleLabel.textAlignment = .center
         return titleLabel
     }()
     fileprivate lazy var startImageView: UIImageView = {
@@ -140,7 +141,7 @@ extension playerBlurView {
         blurMaskView.frame = backImageView.frame
         startImageView.frame = CGRect(x: kscreenWidth - 80, y: knormalPlayerHeight - 60, width: 60, height: 40)
         titleLabel.center = CGPoint(x: kscreenWidth/2, y: 42)
-        titleLabel.sizeToFit()
+        titleLabel.bounds = CGRect(x: 0, y: 0, width: 200, height: 30)
         backButton.center = CGPoint(x: 20, y: 30)
         backButton.sizeToFit()
     }
