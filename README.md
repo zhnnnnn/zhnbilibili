@@ -1,8 +1,11 @@
 #swift3.0 精仿bilibili
-##一年半多的工作经验oc、swift都熟悉。。。杭州求份工作
+##一年半多的工作经验oc、swift都熟悉。。。杭州地区迫切的求份工作
 邮箱: coderZhangHuiNan@163.com
 
 微博: 死板仔-臭打代码的
+
+###心路历程
+这个项目是自己学习swift写的练手项目，挑bilibili纯粹是很喜欢这个应用的界面交互。而且确实相对其它的一些应用ui层面上是相对也要复杂一些的。。。本来只是想着稍微写一写的。但是写着写着感觉也写了挺多了，索性就稍微再多些一点了。。。接口都是自己抓下来的，除了视频播放url的获取方法是直接用的https://github.com/Learning-Software-Development/bilibili-fake 这个项目的获取方法。。。。。。。最近这段时间也看了好多文章 Draveness http://draveness.me/ 冰霜 http://www.jianshu.com/u/12201cdd5d7a bestSwifter https://bestswifter.com/ 感觉还有好长好长的路要走啊。。。。
 
 ###怎么把应完整的跑起来
 1.下载个IJKMediaPlayer拖到工程里面 https://pan.baidu.com/s/1skOF5DV 
