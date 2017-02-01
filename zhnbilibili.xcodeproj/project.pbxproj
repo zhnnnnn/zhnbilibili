@@ -30,7 +30,6 @@
 		CD0DC74F1DEF037200843890 /* HomeBangumiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0DC74E1DEF037200843890 /* HomeBangumiModel.swift */; };
 		CD0DC7511DEF083E00843890 /* HomeBangumiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0DC7501DEF083E00843890 /* HomeBangumiViewModel.swift */; };
 		CD1EFF521E2A080D007F3232 /* ZHNhomePagePraviteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1EFF511E2A080D007F3232 /* ZHNhomePagePraviteCell.swift */; };
-		CD2667531DF6F43600D335F9 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2667521DF6F43600D335F9 /* IJKMediaFramework.framework */; };
 		CD2667581DF6FC5400D335F9 /* ZHNbilibiliLivePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2667571DF6FC5400D335F9 /* ZHNbilibiliLivePlayerViewController.swift */; };
 		CD26675B1DF83A9700D335F9 /* ZHNnotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD26675A1DF83A9700D335F9 /* ZHNnotificationHelper.swift */; };
 		CD2959611DF9506700280E98 /* ZHNplayerUrlLoadingBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2959601DF9506700280E98 /* ZHNplayerUrlLoadingBackView.swift */; };
@@ -495,7 +494,6 @@
 		CD0DC74E1DEF037200843890 /* HomeBangumiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBangumiModel.swift; sourceTree = "<group>"; };
 		CD0DC7501DEF083E00843890 /* HomeBangumiViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBangumiViewModel.swift; sourceTree = "<group>"; };
 		CD1EFF511E2A080D007F3232 /* ZHNhomePagePraviteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNhomePagePraviteCell.swift; sourceTree = "<group>"; };
-		CD2667521DF6F43600D335F9 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IJKMediaFramework.framework; path = zhnbilibili/IJKMediaFramework.framework; sourceTree = "<group>"; };
 		CD2667571DF6FC5400D335F9 /* ZHNbilibiliLivePlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZHNbilibiliLivePlayerViewController.swift; path = ../ZHNbilibiliLivePlayerViewController.swift; sourceTree = "<group>"; };
 		CD26675A1DF83A9700D335F9 /* ZHNnotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNnotificationHelper.swift; sourceTree = "<group>"; };
 		CD2959601DF9506700280E98 /* ZHNplayerUrlLoadingBackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHNplayerUrlLoadingBackView.swift; sourceTree = "<group>"; };
@@ -1196,7 +1194,6 @@
 				CDC704C51DF5B75400230AC9 /* VideoToolbox.framework in Frameworks */,
 				CDC704C31DF5B74B00230AC9 /* OpenGLES.framework in Frameworks */,
 				CDC704C11DF5B74100230AC9 /* MobileCoreServices.framework in Frameworks */,
-				CD2667531DF6F43600D335F9 /* IJKMediaFramework.framework in Frameworks */,
 				CDC704BF1DF5B73600230AC9 /* MediaPlayer.framework in Frameworks */,
 				CDC704BD1DF5B72D00230AC9 /* libz.tbd in Frameworks */,
 				CDC704BB1DF5B72400230AC9 /* libbz2.tbd in Frameworks */,
@@ -1230,7 +1227,6 @@
 				CD5F06FB1E361CBA00120665 /* UIKit.framework */,
 				CD5F06F51E35E78600120665 /* Foundation.framework */,
 				CD5F06F11E35E54B00120665 /* libstdc++.tbd */,
-				CD2667521DF6F43600D335F9 /* IJKMediaFramework.framework */,
 				CDC704C41DF5B75400230AC9 /* VideoToolbox.framework */,
 				CDC704C21DF5B74B00230AC9 /* OpenGLES.framework */,
 				CDC704C01DF5B74100230AC9 /* MobileCoreServices.framework */,
