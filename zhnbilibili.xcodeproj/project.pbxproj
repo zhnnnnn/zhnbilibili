@@ -3570,6 +3570,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/zhnbilibili",
+					"$(PROJECT_DIR)/zhnbilibili/lib",
 				);
 				INFOPLIST_FILE = zhnbilibili/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -3595,6 +3596,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/zhnbilibili",
+					"$(PROJECT_DIR)/zhnbilibili/lib",
 				);
 				INFOPLIST_FILE = zhnbilibili/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
