@@ -1,4 +1,4 @@
-#swift3.0 精仿bilibili
+#swift3.0 高仿bilibili
 ##一年半多的工作经验oc、swift都熟悉。。。杭州地区迫切的求份工作
 邮箱: coderZhangHuiNan@163.com
 
