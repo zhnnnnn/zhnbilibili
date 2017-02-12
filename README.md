@@ -28,18 +28,18 @@ bestSwifter https://bestswifter.com/
 
 ###部分截屏 gif
 
-<img src="https://github.com/zhnnnnn/zhnbilibili/blob/master/readme_images/gif1.gif" width = "300"  height = "400" alt="图片描述" align=center />
-<img src="https://github.com/zhnnnnn/zhnbilibili/blob/master/readme_images/gif2.gif" width = "300"  height = "400" alt="图片描述" align=center />
-<img src="https://github.com/zhnnnnn/zhnbilibili/blob/master/readme_images/gif3.gif" width = "300"  height = "400" alt="图片描述" align=center />
-<img src="https://github.com/zhnnnnn/zhnbilibili/blob/master/readme_images/gif4.gif" width = "300"  height = "400" alt="图片描述" align=center />
-<img src="https://github.com/zhnnnnn/zhnbilibili/blob/master/readme_images/gif5.gif" width = "300"  height = "400" alt="图片描述" align=center />
+<img src="https://github.com/zhnnnnn/zhnbilibili/blob/master/gifs/gif1.gif" width = "300"  height = "400" alt="图片描述" align=center />
+<img src="https://github.com/zhnnnnn/zhnbilibili/blob/master/gifs/gif2.gif" width = "300"  height = "400" alt="图片描述" align=center />
+<img src="https://github.com/zhnnnnn/zhnbilibili/blob/master/gifs/gif3.gif" width = "300"  height = "400" alt="图片描述" align=center />
+<img src="https://github.com/zhnnnnn/zhnbilibili/blob/master/gifs/gif4.gif" width = "300"  height = "400" alt="图片描述" align=center />
+<img src="https://github.com/zhnnnnn/zhnbilibili/blob/master/gifs/gif5.gif" width = "300"  height = "400" alt="图片描述" align=center />
 
-<img src="https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/readme_images/IMG_0569.PNG" width = "300"  height = "400" alt="图片描述" align=center />
-<img src="https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/readme_images/IMG_0570.PNG" width = "300"  height = "400" alt="图片描述" align=center />
-<img src="https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/readme_images/IMG_0571.PNG" width = "300"  height = "400" alt="图片描述" align=center />
-<img src="https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/readme_images/IMG_0572.PNG" width = "300"  height = "400" alt="图片描述" align=center />
-<img src="https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/readme_images/IMG_0573.PNG" width = "300"  height = "400" alt="图片描述" align=center />
-<img src="https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/readme_images/IMG_0575.PNG" width = "300"  height = "400" alt="图片描述" align=center />
+<img src="https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/gifs/IMG_0569.PNG" width = "300"  height = "400" alt="图片描述" align=center />
+<img src="https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/gifs/IMG_0570.PNG" width = "300"  height = "400" alt="图片描述" align=center />
+<img src="https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/gifs/IMG_0571.PNG" width = "300"  height = "400" alt="图片描述" align=center />
+<img src="https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/gifs/IMG_0572.PNG" width = "300"  height = "400" alt="图片描述" align=center />
+<img src="https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/gifs/IMG_0573.PNG" width = "300"  height = "400" alt="图片描述" align=center />
+<img src="https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/gifs/IMG_0575.PNG" width = "300"  height = "400" alt="图片描述" align=center />
 
 ###写在最后
 希望能对大家学习swift有那么一点点的帮助吧，也希望大家能够给我多多的建议
