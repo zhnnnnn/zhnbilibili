@@ -38,7 +38,7 @@ NSMutableArray<VideoURL *> *__Queue;
     
     if ([__Queue count] == 0) {
         [__Queue addObject:operation];
-        [operation getVideoURLMode1];
+        [operation getVideoURLMode2];
     }
     else {
         [__Queue addObject:operation];
@@ -101,7 +101,6 @@ NSMutableArray<VideoURL *> *__Queue;
     completionHandler(NSURLSessionResponseCancel);
     
     [self getVideoURLMode2];
-    
 }
 
 #pragma mark - 方法2
