@@ -1,5 +1,5 @@
 #swift3.0 高仿bilibili
-##二年工作经验oc、swift都熟悉。。。杭州地区迫切的求份工作
+
 邮箱: coderZhangHuiNan@163.com
 
 微博: 死板仔-臭打代码的
