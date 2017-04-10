@@ -15,7 +15,11 @@
 （我上传了一份完整代码到网盘(可能不是最新的)。。。https://pan.baidu.com/s/1cMQAYi ）
 
 ### 部分截屏 gif
-![Mou icon](https://github.com/zhnnnnn/zhnbilibili/blob/master/gifs/gif1.gif)
+
+-------------|-------------|-------------
+![Mou icon](https://github.com/zhnnnnn/zhnbilibili/blob/master/gifs/gif1.gif) | ![Mou icon](https://github.com/zhnnnnn/zhnbilibili/blob/master/gifs/gif2.gif)|![Mou icon](https://github.com/zhnnnnn/zhnbilibili/blob/master/gifs/gif3.gif)
+
+
 
 <img src="https://github.com/zhnnnnn/zhnbilibili/blob/master/gifs/gif1.gif" width = "300"  height = "400" alt="图片描述" align=center />
 
