@@ -17,7 +17,10 @@
 ### 部分截屏 gif
 1 | 2 | 3
 -------------|-------------|-------------
-![Mou icon](https://github.com/zhnnnnn/zhnbilibili/blob/master/gifs/gif1.gif) | ![Mou icon](https://github.com/zhnnnnn/zhnbilibili/blob/master/gifs/gif2.gif) | ![Mou icon](https://github.com/zhnnnnn/zhnbilibili/blob/master/gifs/gif3.gif) | ![Mou icon](https://github.com/zhnnnnn/zhnbilibili/blob/master/gifs/gif4.gif) | ![Mou icon](https://github.com/zhnnnnn/zhnbilibili/blob/master/gifs/gif5.gif) | ![Mou icon](https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/gifs/IMG_0569.PNG) |![Mou icon](https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/gifs/IMG_0570.PNG) | ![Mou icon](https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/gifs/IMG_0571.PNG) | ![Mou icon](https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/gifs/IMG_0572.PNG) | ![Mou icon](https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/gifs/IMG_0573.PNG) | ![Mou icon](https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/gifs/IMG_0575.PNG)
+![Mou icon](https://github.com/zhnnnnn/zhnbilibili/blob/master/gifs/gif1.gif) | ![Mou icon](https://github.com/zhnnnnn/zhnbilibili/blob/master/gifs/gif2.gif) | ![Mou icon](https://github.com/zhnnnnn/zhnbilibili/blob/master/gifs/gif3.gif) 
+![Mou icon](https://github.com/zhnnnnn/zhnbilibili/blob/master/gifs/gif4.gif) | ![Mou icon](https://github.com/zhnnnnn/zhnbilibili/blob/master/gifs/gif5.gif) | ![Mou icon](https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/gifs/IMG_0569.PNG) 
+![Mou icon](https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/gifs/IMG_0570.PNG) | ![Mou icon](https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/gifs/IMG_0571.PNG) | ![Mou icon](https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/gifs/IMG_0572.PNG) 
+![Mou icon](https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/gifs/IMG_0573.PNG) | ![Mou icon](https://raw.githubusercontent.com/zhnnnnn/zhnbilibili/master/gifs/IMG_0575.PNG)
 
 ### 写在最后
 希望能对大家学习swift有那么一点点的帮助吧，也希望大家能够给我多多的建议
